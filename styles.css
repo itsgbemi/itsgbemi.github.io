@@ -10,8 +10,7 @@ body {
   flex-direction: column;
   text-align: center;
   margin: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   line-height: 1.7;
@@ -47,7 +46,7 @@ h1::after {
 .text-box {
   margin-left: 20px;
   padding: 5px;
-  width: 90vw;
+  width: 80px;
   text-align: center;
 }
 
@@ -74,7 +73,7 @@ h1::after {
 }
 
 .link:hover::after {
-  width: 100%;
+  width: 80%;
 }
 
 .link:active {
@@ -82,7 +81,7 @@ h1::after {
 }
 
 .link:active::after {
-  background: transparent;
+  color: #69b456;
 }
 
 /* Responsive Design */
