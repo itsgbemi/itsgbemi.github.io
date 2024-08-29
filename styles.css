@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   text-align: center;
   margin: 20px;
+  padding: 20px;
   overflow-y: auto;
   overflow-x: hidden;
   height: 100vh;
@@ -46,7 +47,7 @@ h1::after {
 }
 
 .text-box {
-  margin: 20px 0;
+  margin: 20px;
   width: 100%;
   text-align: center;
 }
