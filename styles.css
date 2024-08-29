@@ -1,0 +1,97 @@
+body {
+  background-color: #313b41;
+  color: #faf9f9;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  line-height: 1.7;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+h1 {
+  color: #69b456;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 100px;
+  font-size: 30px;
+  text-align: center;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #69b456;
+  margin: 10px auto 0;
+}
+
+.text-box {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.link {
+  font-size: 16px;
+  line-height: 1.7;
+  text-decoration: none;
+  color: #faf9f9;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #69b456;
+  transition: width 0.3s;
+  left: 0;
+  bottom: 0;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link:active {
+  color: #faf9f9;
+}
+
+.link:active::after {
+  background: #69b456;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
