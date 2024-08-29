@@ -9,8 +9,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 20px;
-  padding: 20px;
+  margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
   height: 100vh;
@@ -48,6 +47,7 @@ h1::after {
 
 .text-box {
   margin: 20px;
+  padding: 20px;
   width: 100%;
   text-align: center;
 }
