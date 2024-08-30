@@ -111,6 +111,9 @@ body {
 
 /* Media query for mobile screens */
 @media (max-width: 480px) {
+    .spacer {
+        height: 1px;
+    }    
     .social-links-box {
         width: 90vw;
     }
