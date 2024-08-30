@@ -21,7 +21,7 @@ body {
     margin-top: 20px;
     margin-bottom: 40px;
     padding: 30px;
-    width: 70vw;
+    width: 50vw;
     border-radius: 14px;
     display: flex;
     flex-direction: column;
@@ -38,8 +38,8 @@ body {
 }
 
 .profile-picture img {
-    width: 40%;
-    height: 40%;
+    width: 25%;
+    height: 25%;
 }
 
 .profile-name {
@@ -69,7 +69,7 @@ body {
 
 .button {
   display: block;
-  width: 55vw;
+  width: 35vw;
     background-color: #333333;
     border: none;
     border-radius: 7px;
