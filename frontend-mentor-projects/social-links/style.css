@@ -30,8 +30,8 @@ body {
 }
 
 .profile-picture {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
     border-radius: 50%;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -119,10 +119,6 @@ body {
 @media (max-width: 480px) {
     .social-links-box {
         width: 90vw;
-    }
-    .profile-picture {
-      width: 150px;
-      height: 150px;
     }
     .profile-name {
       font-size: 21px;
