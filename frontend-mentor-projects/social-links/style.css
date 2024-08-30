@@ -11,6 +11,8 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 5px;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
     line-height: 1.7;
 }
 
