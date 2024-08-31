@@ -209,8 +209,8 @@ footer p {
   .spacer {
     height: 20px;
   }
-  .card-box {
-    width: 80%;
+  .card {
+    width: 400px;
   }
   .card-name {
     font-size: 21px;
