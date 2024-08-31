@@ -1,4 +1,4 @@
-# Frontend Mentor - Social links profile solution
+# Frontend Mentor - NFT Preview Card Component Solution
 
 Hello! 👋 . Thanks for checking out my solution to the [NFT Preview Card Component coding challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub) by [Frontend Mentor](https://www.frontendmentor.io).
 
