@@ -1,0 +1,245 @@
+/* Basic Reset for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Outfit', sans-serif;
+  background-image: linear-gradient(#0d1a2d, #0c1729);
+  color: #f8fbff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+/* Spacer */
+.spacer {
+  width: 100%;
+  height: 66px;
+}
+
+/* Links */
+a {
+  color: #e5eff4;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #3be1e3;
+}
+
+/* Card Styling */
+.card {
+  background-image: linear-gradient(#14263e, #15273f);
+  background-color: #14263e;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+}
+
+/* Card Image Wrapper Styling */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 5px auto;
+}
+
+/* Card Image Styling */
+.card-image {
+  width: 100%;
+  height: auto; 
+  border-radius: 9px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay Styling */
+.card-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3be1e3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 9px;
+  pointer-events: none;
+}
+
+/* Hover Effect */
+.card-image-wrapper:hover::before {
+  opacity: 0.8;
+}
+
+/* Icon View Styling */
+.icon-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show Icon on Hover */
+.card-image-wrapper:hover .icon-view {
+  opacity: 1;
+}
+
+/* Card Name Styling */
+.card-name {
+  color: #f8fbff;
+  font-weight: 600;
+  font-size: 27px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* Card Description Styling */
+.card-description {
+  color: #7088a9;
+  font-weight: 300;
+  font-size: 21px;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.price-box, .timeline-box {
+  display: flex;
+  align-items: center;
+}
+
+/* Icon Styling */
+.icon {
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+}
+
+/* Price Text Styling */
+.price-text {
+  color: #3be1e3;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+/* Timeline Text Styling */
+.timeline-text {
+  color: #5c7193;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+/* Separator Styling */
+.separator {
+  border: none;
+  border-top: 1px solid #334863;
+  margin: 20px 0;
+}
+
+/* Creator Box Styling */
+.creator-box {
+  display: flex;
+  align-items: center;
+}
+
+/* Creator Image Styling */
+.creator-image {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Creator Text Styling */
+.creator-text {
+  color: #5c7193;
+  font-size: 21px;
+}
+
+.creator-name {
+  color: #e5eff4;
+}
+
+/* Footer Styling */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 90%;
+  font-weight: 300;
+  text-align: center;
+  padding: 5px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+footer p {
+  color: #5c7193;
+  font-size: 21px;
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 480px) {
+  .spacer {
+    height: 20px;
+  }
+  .card-box {
+    width: 80%;
+  }
+  .card-name {
+    font-size: 21px;
+  }
+  .card-description {
+    font-size: 16px;
+  }
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+  .price-text {
+    font-size: 14px;
+  }
+  .timeline-text {
+    font-size: 14px;
+  }
+  .creator-image {
+    width: 21px;
+    height: 21px;
+  }
+  .creator-text {
+    font-size: 16px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  .icon-view {
+    width: 31px;
+    height: 31px;
+  }
+}
