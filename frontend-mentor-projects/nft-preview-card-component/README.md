@@ -12,7 +12,7 @@ Hello! 👋 . Thanks for checking out my solution to the [NFT Preview Card Compo
 
 ## Links
 
-- Solution URL: [On Frontend Mentor](https://www.frontendmentor.io/solutions/social-links-profile-built-with-ai-tszW27We5J)
+- Solution URL: [On Frontend Mentor](https://www.frontendmentor.io/solutions/nft-preview-card-component-playing-with-gradients-and-overlay-SFsg_vYz1E)
 - Live Site URL: [Hosted on GitHub Pages](https://itsgbemi.github.io/frontend-mentor-projects/nft-preview-card-component/)
 - Frontend Mentor Profile: [@itsgbemi](https://www.frontendmentor.io/profile/itsgbemi)
 
