@@ -37,6 +37,7 @@ body, html {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: auto;
     background-image: url('image/pattern-hills.svg');
     background-repeat: repeat;
     background-position: bottom;
@@ -126,10 +127,6 @@ body, html {
 /* Media Queries */
 
 @media (min-width: 481px) {
-    .pattern-hills {
-        height: 70px;
-    }
-
     .heading h1 {
         font-size: 27px;
     }
@@ -149,10 +146,6 @@ body, html {
 }
 
 @media (max-width: 480px) {
-    .pattern-hills {
-        height: 100px;
-    }
-
     .heading h1 {
         font-size: 21px;
     }
