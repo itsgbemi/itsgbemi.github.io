@@ -39,7 +39,6 @@ body, html {
     width: 100%;
     height: auto;
     background-image: url('image/pattern-hills.svg');
-    background-repeat: repeat;
     background-position: bottom;
     background-size: contain;
 }
@@ -124,12 +123,20 @@ body, html {
     filter: invert(34%) sepia(98%) saturate(399%) hue-rotate(300deg) brightness(94%) contrast(101%);
 }
 
+.social-icons a img:active {
+    filter: invert(34%) sepia(98%) saturate(399%) hue-rotate(300deg) brightness(94%) contrast(101%);
+}
+
 /* Media Queries */
 
 @media (min-width: 481px) {
     .heading h1 {
         font-size: 27px;
     }
+
+  .pattern-hills {
+        background-repeat: repeat;  
+  }    
 
     .countdown-box {
         width: 75px;
@@ -150,6 +157,10 @@ body, html {
         font-size: 21px;
     }
 
+  .pattern-hills {
+        background-repeat: no-repeat;  
+  }
+    
     .countdown-box {
         width: 65px;
     }
