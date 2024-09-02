@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+body, html {
+    height: 100%;
+    font-family: Red Hat Text, sans-serif;
+    background-color: #241e2c;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/bg-stars.svg');
+    background-repeat: repeat;
+    background-size: 150px 150px;
+}
+
+.pattern-hills {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('image/pattern-hills.svg');
+    background-repeat: repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.heading {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.heading h1 {
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.countdown {
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.countdown-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.countdown-time {
+    color: #ec5f89;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #2f2b46;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.countdown-label {
+    color: #c2bce4;
+    font-size: 5px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.social-icons {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+.social-icons a img:hover {
+    filter: invert(34%) sepia(98%) saturate(399%) hue-rotate(300deg) brightness(94%) contrast(101%);
+}
+
+/* Media Queries */
+
+@media (min-width: 481px) {
+    .pattern-hills {
+        height: 70px;
+    }
+
+    .heading h1 {
+        font-size: 27px;
+    }
+
+    .countdown-box {
+        width: 75px;
+    }
+
+    .countdown-time {
+        width: 75px;
+        font-size: 25px;
+    }
+
+    .countdown-label {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pattern-hills {
+        height: 100px;
+    }
+
+    .heading h1 {
+        font-size: 21px;
+    }
+
+    .countdown-box {
+        width: 65px;
+    }
+
+    .countdown-time {
+        width: 65px;
+        font-size: 24px;
+    }
+
+    .countdown-label {
+        font-size: 5px;
+    }
+}
