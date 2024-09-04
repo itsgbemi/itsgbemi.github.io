@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solution for the Todo App challenge by Frontend Mentor">
+  <meta name="keywords" content="Todo, Todo App, Productivity, List app">
+  <meta name="author" content="Gbemisola Oyeniyi">
+  <title>Todo App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-header">
+    <header>
+      <div class="header-content">
+        <h1>TODO</h1>
+      </div>
+      <img src="image/icon-moon.svg" alt="Moon Icon" class="header-icon">
+    </header>
+    <div class="search-container">
+      <div class="search-circle-box">
+        <div class="search-circle"></div>
+      </div>
+      <div class="search-input-box">
+        <input type="text" placeholder="Create a new todo...">
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-todo">
+    <div class="list">
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Complete online JavaScript course</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Jog around the park 3x</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>10 minutes meditation</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Read for 1 hour</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Pick up groceries</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Complete todo app on Frontend Mentor</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+    </div>
+    <div class="status">
+      <div class="summary">6 items left</div>
+      <div class="clear">Clear Completed</div>
+    </div>
+    <div class="filter">
+      <p>All</p>
+      <p>Active</p>
+      <p>Completed</p>
+    </div>
+  </div>
+
+  <div class="desktop-todo">
+    <div class="list">
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Complete online JavaScript course</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Jog around the park 3x</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>10 minutes meditation</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Read for 1 hour</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Pick up groceries</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+      <div class="task-box">
+        <div class="circle-box">
+          <div class="circle"></div>
+        </div>
+        <div class="textbox">
+          <p>Complete todo app on Frontend Mentor</p>
+        </div>
+        <div class="cross-box">
+          <img src="image/icon-cross.svg" alt="Cross Icon">
+        </div>
+      </div>
+    </div>
+    <div class="status">
+      <div class="summary">6 items left</div>
+      <div class="clear">Clear Completed</div>
+    </div>
+    <div class="filter">
+      <p class="active">All</p>
+      <p>Active</p>
+      <p>Completed</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
