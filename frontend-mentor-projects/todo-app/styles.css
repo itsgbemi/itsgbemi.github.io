@@ -289,6 +289,7 @@ header {
   }
 
   .todo {
+    width: 90vw;
     margin: 20px auto;
   }
 }
