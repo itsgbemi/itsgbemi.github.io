@@ -122,24 +122,13 @@ header {
 }
 
 /* Todo Section */
-.desktop-todo {
+.todo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50vw;
   margin: 10px auto 0;
-  position: relative;
-  top: -50px;
-}
-
-.mobile-todo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90vw;
-  margin: 20px auto;
   position: relative;
   top: -50px;
 }
@@ -299,12 +288,8 @@ header {
     margin-top: 10px;
   }
 
-  .desktop-todo {
-    display: none;
-  }
-
-  .mobile-todo {
-    display: block;
+  .todo {
+    margin: 20px auto;
   }
 }
 
@@ -313,13 +298,5 @@ header {
   .page-header {
     height: 300px;
     background-image: url('image/bg-desktop-light.jpg');
-  }
-
-  .mobile-todo {
-    display: none;
-  }
-
-  .desktop-todo {
-    display: block;
   }
 }
