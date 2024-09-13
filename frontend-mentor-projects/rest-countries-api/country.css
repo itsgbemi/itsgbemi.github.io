@@ -154,7 +154,7 @@ body.dark-mode .back-button .icon {
 /* First Column: Country Flag as Background Image */
 .country-flag {
   flex: 1;
-  height: 400px;
+  min-height: 400px;
   background-size: contain;
   background-position: left;
   background-color: transparent;
@@ -215,7 +215,9 @@ body.dark-mode .back-button .icon {
 
 .borders {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+  padding-right: 5px;
 }
 
 .border-country {
@@ -243,4 +245,7 @@ body.dark-mode .back-button .icon {
   .textbox-container {
     flex-direction: column;
   }
+
+  .country-flag {
+    min-height: 200px;
 }
