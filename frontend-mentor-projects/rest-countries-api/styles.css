@@ -1,0 +1,283 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font and Body */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
+}
+
+/* Typography */
+.title, h1, h2, h3 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+p, .dark-mode-toggle {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--element-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Icon Styles */
+.icon {
+  width: 14px;
+  height: 14px;
+  transition: filter 0.3s ease;
+}
+
+/* Color Variables for Light Mode */
+:root {
+  --background-color: hsl(0, 0%, 98%);
+  --text-color: hsl(200, 15%, 8%);
+  --element-color: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 52%);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  --element-color: hsl(209, 23%, 22%);
+}
+
+/* Dark Mode Icon Switch */
+body.dark-mode .icon-arrow-down {
+  content: url('gray-icon-arrow-down.svg'); /* Use the gray icon in dark mode */
+}
+
+body.dark-mode .icon-sun {
+  filter: invert(1) brightness(0.8); /* Invert the color of the sun icon */
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 20px;
+  gap: 20px; /* Space between search box and filter box */
+}
+
+/* Search Box Styles */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: var(--element-color);
+  width: 300px; /* Adjust as needed */
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  width: 100%; /* Full width of search box */
+}
+
+.search-input::placeholder {
+  color: #c8c8c8;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* Existing CSS... */
+
+/* Filter Box Styles */
+.filter-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: var(--element-color);
+  width: 180px; /* Adjust as needed */
+  position: relative; /* For positioning the dropdown */
+}
+
+
+.filter-text {
+  color: var(--text-color);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+}
+
+
+/* Dropdown Content Styles */
+.dropdown-content {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 0;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 5px;
+  background-color: var(--element-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Dropdown Item Styles */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.dropdown-item:hover,
+.dropdown-item.selected {
+  background-color: hsl(200, 15%, 90%); /* Light background for hover/selected */
+  color: hsl(200, 15%, 8%); /* Dark text color for hover/selected */
+}
+
+/* Show Dropdown when active */
+.filter-box.open .dropdown-content {
+  display: block;
+}
+
+/* Arrow Icon Styles */
+.filter-box .icon-arrow-down {
+  transition: transform 0.3s ease;
+}
+
+.filter-box.open .icon-arrow-down {
+  transform: rotate(180deg); /* Rotate arrow when dropdown is open */
+}
+
+
+/* Country Container */
+.country-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 40px;
+  margin-left: 30px; /* Add margin on the left and right sides */
+  margin-right: 20px;
+  margin-top: 20px; /* Optionally, add margin on the top */
+  margin-bottom: 20px; /* Optionally, add margin on the bottom */
+  justify-content: center; /* Center the grid layout */
+}
+
+
+/* Country Card */
+.country-card {
+  display: block;
+  background-color: var(--element-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.2s ease;
+  margin-bottom: 30px;
+  width: 280px;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Country Flag */
+.country-flag {
+  width: 280px;
+  height: 180px;
+  object-fit: cover; /* Ensures the image covers the full area, preserving aspect ratio */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Country Name */
+.country-name {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+/* Other text in country card */
+.country-card p {
+  font-size: 14px;
+  margin: 5px 0;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .country-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    gap: 15px; /* Reduced gap on mobile */
+  }
+
+  .search-box, .filter-box {
+    width: 100%; /* Full width on small screens */
+    max-width: none; /* Remove max-width constraints */
+  }
+  
+    .country-container {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 25px;
+  }
+
+  .country-card {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .country-flag {
+    width: 100%;
+  }
+}

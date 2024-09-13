@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="REST Countries API with colour theme switch. Solution by Gbemisola Oyeniyi for Frontend Mentor Project Challenge">
+  <meta name="author" content="Gbemisola Oyeniyi">
+  <title>Rest Countries API</title>
+  <!-- Google Font: Nunito Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="country.css">
+</head>
+<body>
+  <header>
+    <div class="title">Where in the world?</div>
+    <div class="dark-mode-toggle" id="theme-toggle">
+      <img src="icon-moon.svg" alt="Moon Icon" class="icon">
+      <span>Dark Mode</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="back-button">
+      <img src="black-arrow-back.svg" alt="Back Icon" class="icon">
+      <span>Back</span>
+    </button>
+  </div>
+
+  <main>
+    <div class="country-details-container">
+      <!-- First Column: Background Image -->
+      <div class="country-flag"></div>
+
+      <!-- Second Column: Country Details -->
+      <div class="country-details">
+        <h1 class="country-name"></h1>
+        
+        <!-- Textbox Container -->
+        <div class="textbox-container">
+          <div class="textbox first-textbox"></div>
+          <div class="textbox second-textbox"></div>
+        </div>
+        
+        <!-- Border Countries Block -->
+        <div class="borders-block">
+          <h2>Border Countries</h2>
+          <div class="borders"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="country.js"></script>
+</body>
+</html>

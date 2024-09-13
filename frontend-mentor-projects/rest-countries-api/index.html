@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="REST Countries API with colour theme switch. Solution by Gbemisola Oyeniyi for Frontend Mentor Project Challenge">
+  <meta name="author" content="Gbemisola Oyeniyi">
+  <title>Rest Countries API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="title">Where in the world?</div>
+    <div class="dark-mode-toggle" id="theme-toggle">
+      <img src="icon-moon.svg" alt="Moon Icon" class="icon">
+      <span>Dark Mode</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="search-box">
+      <img src="icon-search.svg" alt="Search Icon" class="icon">
+      <input type="text" placeholder="Search for a country..." class="search-input">
+    </div>
+    <div class="filter-box" id="filter-box">
+      <span class="filter-text">Filter by region</span>
+      <img src="icon-arrow-down.svg" alt="Arrow Down Icon" class="icon icon-arrow-down">
+      <div class="dropdown-content" id="dropdown-content">
+        <div class="dropdown-item" data-region="all">All</div>
+        <div class="dropdown-item" data-region="Africa">Africa</div>
+        <div class="dropdown-item" data-region="America">America</div>
+        <div class="dropdown-item" data-region="Asia">Asia</div>
+        <div class="dropdown-item" data-region="Europe">Europe</div>
+        <div class="dropdown-item" data-region="Oceania">Oceania</div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="country-container">
+      <!-- Country cards will be generated here -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

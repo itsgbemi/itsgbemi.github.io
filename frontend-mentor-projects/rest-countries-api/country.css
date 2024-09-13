@@ -1,0 +1,246 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font and Body */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
+}
+
+/* Typography */
+.title, h1, h2, h3 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+p, .dark-mode-toggle {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--element-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.title {
+  margin-left: 15px;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* Icon Styles */
+.icon {
+  width: 14px;
+  height: 14px;
+  transition: filter 0.3s ease;
+}
+
+/* Color Variables for Light Mode */
+:root {
+  --background-color: hsl(0, 0%, 98%);
+  --text-color: hsl(200, 15%, 8%);
+  --element-color: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 52%);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  --element-color: hsl(209, 23%, 22%);
+}
+
+/* Dark Mode Icon Switch */
+body.dark-mode .icon-arrow-down {
+  content: url('gray-icon-arrow-down.svg'); /* Use the gray icon in dark mode */
+}
+
+body.dark-mode .icon-sun {
+  filter: invert(1) brightness(0.8); /* Invert the color of the sun icon */
+}
+
+a {
+text-decoration: none;
+}
+
+.container {
+  padding: 16px;
+}
+
+/* Back Button Styling */
+.back-button {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  color: hsl(200, 15%, 8%);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #fff;
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 48px;
+}
+
+.back-button .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.back-button:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+body.dark-mode .back-button {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+
+body.dark-mode .back-button:hover {
+  background-color: hsl(209, 23%, 30%);
+}
+
+body.dark-mode .back-button .icon {
+  content: url('white-arrow-back.svg');
+}
+
+/* Container for country details */
+.country-details-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px; /* Increase gap between columns */
+  background-color: transparent;
+  margin-left: 20px; /* Margin similar to the back button */
+  margin-right: 20px; /* Optional: for symmetry on the right side */
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.country-details-container.hidden {
+  opacity: 0;
+}
+
+/* First Column: Country Flag as Background Image */
+.country-flag {
+  flex: 1;
+  height: 400px;
+  background-size: contain;
+  background-position: left;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden; 
+  position: relative;
+}
+
+/* Second Column: Country Details */
+.country-details {
+  flex: 2;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.country-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Uniform margin */
+}
+
+/* Textbox Container */
+.textbox-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between textboxes */
+}
+
+.textbox {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  margin-bottom: 20px; /* Uniform margin */
+}
+
+.textbox p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Border Countries Block */
+.borders-block {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.borders-block h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.borders {
+  display: flex;
+  gap: 10px;
+}
+
+.border-country {
+  background-color: var(--element-color);
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.borders-block {
+  margin-bottom: 20px; /* Uniform margin */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .country-details-container {
+    flex-direction: column;
+    margin-left: 20px; /* Keep margin on smaller screens */
+    margin-right: 20px; /* Keep symmetry */
+  }
+
+  .textbox-container {
+    flex-direction: column;
+  }
+}
