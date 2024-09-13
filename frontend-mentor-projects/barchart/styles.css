@@ -1,0 +1,199 @@
+/* Page background */
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f7e9dc;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+/* Container for fixed width */
+.container {
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto;    /* Center horizontally */
+    padding: 20px;     /* Padding around content */
+}
+
+/* Balance Box */
+.balance-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ec755d;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+/* Balance info text */
+.balance-info h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+
+.balance {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+/* Shapeform circles */
+.shapeform {
+    display: flex;
+}
+
+.circle-container {
+    position: relative;
+    width: 60px;
+    height: 40px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    border: 2px solid white;
+    background-color: transparent;
+    left: 0;
+    width: 38px;
+    height: 38px;
+}
+
+.circle2 {
+    background-color: #18191b;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+/* New container-box to wrap both bar chart and summary */
+.container-box {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;    /* White background */
+    border-radius: 15px;        /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+/* Bar Chart Container styles */
+.barchart-container h3 {
+    color: #392514;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.barchart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px; /* Maximum height for the tallest bar */
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.bar {
+    width: 31px;
+    background-color: #ed745e;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+/* Wednesday special color */
+.bar.wed {
+    background-color: #76b5bc;
+}
+
+/* Tooltip on click */
+.bar:hover::before {
+    content: "$" attr(data-amount);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #18191b;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Day labels under the barchart */
+.days {
+    display: flex;
+    justify-content: space-between;
+    color: #c3bfb8;
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-right: 13px;
+}
+
+/* Separator between the bar chart and the summary */
+.separator {
+    height: 1px;
+    background-color: #d1ccc0;
+    margin: 5px;
+}
+
+/* Summary Box inside the container */
+.summary-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Total this month summary */
+.bar-summary h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #b5b3ac;
+    margin: 0;
+}
+
+.bar-summary p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #392514;
+    margin: 0;
+}
+
+/* Report section aligned to the right */
+.report {
+    text-align: right;
+}
+
+.trajectory {
+    font-size: 16px;
+    font-weight: 700;
+    color: #392514;
+    margin: 0;
+}
+
+.timeline {
+    font-size: 12px;
+    font-weight: 400;
+    color: #b5b3ac;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduce padding */
+    }
+    
+    .balance-box {
+      margin: 10px;
+    }
+    
+    .container-box {
+      margin: 10px;
+    }
+} 

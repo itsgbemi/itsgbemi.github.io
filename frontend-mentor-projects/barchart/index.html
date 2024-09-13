@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Mentor Project Challenge Solution for an Expenses Bar Component">
+    <meta name="keywords" content="Bar Chart, Frontend Mentor Project, Chart, JavaScript Project">
+    <meta name="author" content="Gbemisola Oyeniyi">
+    <title>Expenses Bar Component</title>
+    <!-- Google Font: DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Balance Box -->
+    <div class="balance-box">
+        <div class="balance-info">
+            <h2>My balance</h2>
+            <p class="balance">$921.48</p>
+        </div>
+        <div class="shapeform">
+            <div class="circle-container">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-box">
+        <div class="barchart-container">
+            <h3>Spending - Last 7 Days</h3>
+            <div class="barchart">
+                <div class="bar" data-day="mon" data-amount="17.45"></div>
+                <div class="bar" data-day="tue" data-amount="34.91"></div>
+                <div class="bar wed" data-day="wed" data-amount="52.36"></div>
+                <div class="bar" data-day="thu" data-amount="31.07"></div>
+                <div class="bar" data-day="fri" data-amount="23.39"></div>
+                <div class="bar" data-day="sat" data-amount="43.28"></div>
+                <div class="bar" data-day="sun" data-amount="25.48"></div>
+            </div>
+            <div class="days">
+                <span>mon</span><span>tue</span><span>wed</span><span>thu</span><span>fri</span><span>sat</span><span>sun</span>
+            </div>
+        </div>
+
+
+        <div class="separator"></div>
+
+        <div class="summary-box">
+            <div class="bar-summary">
+                <h4>Total this month</h4>
+                <p>$478.33</p>
+            </div>
+            <div class="report">
+                <p class="trajectory">+2.4%</p>
+                <p class="timeline">from last month</p>
+            </div>
+        </div>
+    </div>
+  </div>  
+
+    <script src="script.js"></script>
+</body>
+</html>
