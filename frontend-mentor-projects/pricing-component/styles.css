@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background-color: hsl(240, 78%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: auto; /* Prevent background images from scrolling into content */
+}
+
+.background-images .bg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 300px;
+  opacity: 0.8;
+}
+
+.background-images .bg-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 300px;
+  opacity: 0.8;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.toggle-container span {
+  margin: 0 10px;
+  font-size: 16px;
+  color: hsl(232, 13%, 49%);
+}
+
+.toggle-switch {
+  width: 50px;
+  height: 25px;
+  background-color: hsl(237, 63%, 64%);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch .toggle-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: left 0.3s;
+}
+
+.plans {
+  display: flex;
+  justify-content: space-between;
+  gap: 0; /* Remove gap between plans */
+  align-items: center; /* Align items to the center */
+}
+
+.plan {
+  background-color: hsl(240, 78%, 98%);
+  border: 1px solid hsl(234, 14%, 74%);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content within the plan */
+}
+
+.plan.basic {
+  border-radius: 10px 0 0 10px; /* Rounded left corners */
+}
+
+.plan.master {
+  border-radius: 0 10px 10px 0; /* Rounded right corners */
+}
+
+.plan.professional {
+  border-radius: 10px;
+}
+
+.plan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.plan h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.plan .price {
+  font-size: 45px;
+  color: hsl(232, 13%, 33%);
+  margin: 20px 0;
+}
+
+.plan ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.plan ul li {
+  border-top: 1px solid hsl(234, 14%, 74%);
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+  padding: 10px 0;
+}
+
+.plan button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.plan.professional {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  padding: 40px; /* Increase padding to make it taller */
+  color: white; /* Set text color to white */
+}
+
+.plan.professional h2, 
+.plan.professional .price,
+.plan.professional ul li {
+  color: white; /* Ensure all texts inside professional plan are white */
+}
+
+.plan.professional button {
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+}
+
+.plan.basic button, 
+.plan.master button {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  border: none;
+}
+
+.plan button:hover {
+  background: none; /* Remove background color/gradient */
+  border: 2px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+}
+
+.plan.basic button:hover, 
+.plan.master button:hover {
+  background: none;
+  border: 2px solid hsl(236, 72%, 79%);
+  color: hsl(236, 72%, 79%);
+}
+
+.plan.professional button:hover {
+  background: none;
+  border: 2px solid white;
+  color: white;
+}
+
+.price.annually {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .plans {
+    flex-direction: column;
+  }
+
+  .plan {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .plan.basic { 
+    border-radius: 10px;
+  }
+
+  .plan.master { 
+    border-radius: 10px;
+  }
+
+  .plan.professional {
+    padding: 20px;
+  }
+}
