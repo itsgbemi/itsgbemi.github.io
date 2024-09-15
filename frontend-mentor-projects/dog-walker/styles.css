@@ -12,7 +12,7 @@
 
         /* Separate background image styling */
         .background {
-            background-image: url('image-background.png');
+            background-image: url('image-background.jpg');
             background-position: top left;
             background-size: contain;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
         /* Media Queries for responsiveness */
         @media screen and (max-width: 768px) {
             .background {
-                background-image: url('image-mobile.png');
+                background-image: url('image-mobile.jpg');
             }
 
             .container {
