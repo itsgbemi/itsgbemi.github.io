@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const countdownDate = new Date("Sep 15, 2024 00:00:00").getTime();
+const countdownDate = new Date("Dec 15, 2024 00:00:00").getTime();
 
 // Function to add a leading zero to numbers less than 10
 function formatNumber(number) {
