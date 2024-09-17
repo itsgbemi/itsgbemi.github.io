@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Mentor Project Challenge Solution for Blogr landing page">
+  <meta name="keywords" content="Blog, Homepage design, Homepage development">
+  <meta name="author" content="Gbemisola Oyeniyi">
+  <title>Blogr - Home</title>
+  <!-- Link to Overpass font -->
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+
+<!-- Link to Ubuntu font -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Desktop Header -->
+  <header class="desktop-header">
+      <img src="images/logo.svg" alt="Logo" class="logo">
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            Products <img src="images/icon-arrow-down.svg" alt="Dropdown" class="dropdown-icon">
+            <ul class="dropdown-content">
+              <li>Overview</li>
+              <li>Pricing</li>
+              <li>Marketplace</li>
+              <li>Features</li>
+              <li>Integrations</li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            Company <img src="images/icon-arrow-down.svg" alt="Dropdown" class="dropdown-icon">
+            <ul class="dropdown-content">
+              <li>About</li>
+              <li>Team</li>
+              <li>Blog</li>
+              <li>Careers</li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">   Connect <img src="images/icon-arrow-down.svg" alt="Dropdown" class="dropdown-icon">
+            <ul class="dropdown-content">
+              <li>Contact</li>
+              <li>Newsletter</li>
+              <li>LinkedIn</li>
+            </ul>          
+          </li>
+        </ul>
+      </nav>
+      <div class="buttons">
+        <button class="login">Login</button>
+        <button class="register">Register</button>
+      </div>
+  </header>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <img src="images/logo.svg" alt="Logo" class="logo">
+    <img src="images/icon-menu.svg" alt="Menu" class="menu-icon" id="menuIcon">
+  </div>
+</header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-header">
+      <img src="images/icon-close-menu.svg" alt="Close Menu" class="close-icon" id="closeMenu">
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="nav-item dropdown">
+        Products <img src="images/icon-arrow-down.svg" alt="Dropdown" class="dropdown-icon">
+        <ul class="dropdown-content">
+          <li>Overview</li>
+          <li>Pricing</li>
+          <li>Marketplace</li>
+          <li>Features</li>
+          <li>Integrations</li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        Company <img src="images/icon-arrow-down.svg" alt="Dropdown" class="dropdown-icon">
+        <ul class="dropdown-content">
+          <li>About</li>
+          <li>Team</li>
+          <li>Blog</li>
+          <li>Careers</li>
+        </ul>
+      </li>
+       <li class="nav-item dropdown">
+        Connect <img src="images/icon-arrow-down.svg" alt="Dropdown" class="dropdown-icon">
+        <ul class="dropdown-content">
+          <li>Contact</li>
+          <li>Newsletter</li>
+          <li>LinkedIn</li>
+        </ul>
+      </li>     
+    </ul>
+    <div class="mobile-buttons">
+      <button class="login">Login</button>
+      <button class="register">Sign Up</button>
+    </div>
+  </div>
+<div class="hero-section">
+  <img src="images/bg-pattern-intro-desktop.svg" class="desktop-background" alt="Background pattern">
+   <img src="images/bg-pattern-intro-mobile.svg" class="mobile-background" alt="Background pattern">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>A modern publishing house</h1>
+      <p>Grow your audience and build your online brand</p>
+    <div class="cta-buttons">
+      <button class="start">Start for free</button>
+       <button class="learn-more">Learn more</button>     
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="container">
+   <h2>Introducing Our Features</h2>
+     <div class="columns">
+    <!-- First Column: Text Boxes -->
+     <div class="text-column">
+    <div class="text-box">
+       <h3>Introducing an extensible editor</h3>
+       <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+        </div>
+     <div class="text-box">
+      <h3>Robust content management</h3>
+      <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control.</p>
+       </div>
+   </div>
+
+ <!-- Second Column: Images -->
+   <div class="image-column">
+     <div class="bg-image"></div>
+     <img src="images/illustration-editor-desktop.svg" alt="Editor Illustration" class="main-image">
+       </div>
+    </div>
+    </div>
+ 
+ <div class="spacer"></div>
+ <div class="spacer"></div>
+
+ <div class="blue-container">
+  <!-- Left Column: Background Image and Illustration -->
+  <div class="visual-column">
+    <img src="images/illustration-phones.svg" alt="Taller Illustration" class="taller-image">
+  </div>
+
+  <!-- Right Column: Text Content -->
+  <div class="content-column">
+    <h3>State of the Art Infrastructure</h3>
+    <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+  </div>
+</div>
+
+ <div class="spacer"></div>
+ <div class="spacer"></div>
+
+ <div class="container">
+        <div class="columns">
+      <!-- Second Column: Images -->
+     <div class="image-column">
+         <div class="bg-image"></div>
+         <img src="images/illustration-laptop-desktop.svg" alt="Editor Illustration" class="other-main-image">
+            </div>       
+          
+   <!-- First Column: Text Boxes -->
+      <div class="text-column">
+      <div class="text-box">
+       <h3>Free, open, simple</h3>
+     <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+      </div>
+      <div class="text-box">
+        <h3>Powerful tooling</h3>
+         <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+                </div>
+            </div>
+        </div>
+    </div>   
+  <div class="spacer"></div>
+    <footer>
+  <div class="footer-container">
+    <!-- First Column: Logo -->
+    <div class="footer-column logo-column">
+      <img src="images/logo.svg" alt="Logo">
+    </div>
+
+    <!-- Second Column: Product -->
+    <div class="footer-column">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Integrations</a></li>
+      </ul>
+    </div>
+
+    <!-- Third Column: Company -->
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+
+    <!-- Fourth Column: Connect -->
+    <div class="footer-column">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
