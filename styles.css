@@ -1,96 +1,378 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #313b41;
-  color: #faf9f9;
-  font-family: "DM Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+  background-color: #131212;
+  line-height: 1.3;
+}
+
+.spacer {
+  width: 100%;
+  height: 69px;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  line-height: 1.7;
+  background-image: url('image/cosmo.jpg'); /* Replace with actual image */
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-body.fade-in {
-  opacity: 1;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Overlay */
+  z-index: 1;
 }
 
-body.fade-out {
-  opacity: 0;
+.hero-content {
+  position: absolute; /* Change to absolute to position it at the bottom */
+  bottom: 50px; /* Move it closer to the bottom of the hero section */
+  left: 20px; /* Align content to the left */
+  z-index: 2;
+  text-align: left; /* Align text to the left */
+  padding-right: 20px;
+}
+
+.icon-inline {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+  vertical-align: middle; /* Align with the text */
+}
+
+.icon-inline:first-child {
+  margin-right: 5px; /* Space between first icon and text */
+}
+
+.icon-inline:last-child {
+  margin-left: 10px; /* Space between text and second icon */
 }
 
 h1 {
-  color: #69b456;
-  font-family: "Ultra", serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 100px;
-  font-size: 30px;
-  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
 }
 
-h1::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 2px;
-  background-color: #69b456;
-  margin: 10px auto 0;
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
 }
 
-.text-box {
-  margin-left: 20px;
-  padding: 5px;
-  width: 80px;
-  text-align: center;
+h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
-.link {
-  font-size: 16px;
-  line-height: 1.7;
-  text-decoration: none;
-  color: #faf9f9;
-  position: relative;
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+
+
+.btn {
   display: inline-block;
-  padding-bottom: 2px;
+  padding: 10px 20px;
+  background-color: #ff6200;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-.link::after {
-  content: '';
+/* Navigation Bar */
+.navbar {
   position: absolute;
-  width: 0;
-  height: 2px;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-icon {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-avatar {
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+/* GBEMI Text */
+.brand-name {
+font-family: 'Righteous';
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a:active {
+  color: #ff6200;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active {
+  transform: rotate(90deg); /* Rotate hamburger when active */
+}
+
+#portfolio {
+  padding: 20px;
+  text-align: left;
+}
+
+#portfolio h2 {
+  margin-bottom: 20px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; /* Space between cards */
+}
+
+.portfolio-card {
   display: block;
-  background: #69b456;
-  transition: width 0.3s;
-  left: 0;
-  bottom: 0;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: #131313;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.link:hover::after {
-  width: 80%;
+.portfolio-card img {
+  width: 100%;
+  height: auto;
 }
 
-.link:active {
-  color: #69b456;
+.portfolio-card h3 {
+  padding: 20px;
 }
 
-.link:active::after {
-  color: #69b456;
+.portfolio-card p {
+  padding-left: 20px;
+  padding-right: 15px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 24px;
+.portfolio-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer styling */
+footer {
+  background-color: #010300; /* Adjust as needed */
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows stacking on small screens */
+  gap: 20px;
+}
+
+.footer-left {
+  font-size: 1.5rem;
+}
+
+/* Styling for social icons */
+.footer-right {
+  display: flex; /* Ensures icons are in a row */
+  align-items: center;
+}
+
+.footer-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Size of the circular button */
+  height: 40px; /* Size of the circular button */
+  background-color: #ff6200; /* Circular background color */
+  border-radius: 50%; /* Makes it circular */
+  margin-left: 15px; /* Spacing between icons */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer-right img {
+  width: 20px; /* Adjust icon size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive behavior: Stack columns on small screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .link {
-    font-size: 14px;
+  .footer-right {
+    margin-top: 10px;
+  }
+
+ .footer-left {
+   font-size: 1rem;
+ }
+  .footer-right a {
+    margin-left: 0;
+    margin-right: 20px; /* Adjust spacing between icons on small screens */
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-right img {
+    width: 15px;
+  }
+  .nav-links {
+    display: none; /* Hidden on mobile initially */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero content adjustments */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  /* Mobile Menu when active */
+  .nav-links.active {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links.active li {
+    padding: 10px 0;
+    display: block; /* Stack links vertically */
+  }
+
+  .nav-links.active a {
+    font-size: 1.3rem;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Top line */
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide middle line */
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px); /* Bottom line */
+  }
+
+.logo img {
+  margin-right: 5px; /* Reduce space between icons */
+}
+
+.brand-name {
+  font-size: 1.5rem; /* Smaller font size for GBEMI */
+  margin-left: 5px; /* Reduce spacing around GBEMI */
+  margin-right: 5px;
+}
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
   }
 }
