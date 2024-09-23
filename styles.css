@@ -135,7 +135,7 @@ p {
 /* GBEMI Text */
 .brand-name {
 font-family: 'Righteous';
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -157,7 +157,7 @@ font-family: 'Righteous';
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
