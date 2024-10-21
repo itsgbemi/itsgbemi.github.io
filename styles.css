@@ -107,7 +107,7 @@ header {
     color: white;
 }
 
-.consultation:hover {
+.consultation:hover, .consultation:active {
     color: black;
 }
 
