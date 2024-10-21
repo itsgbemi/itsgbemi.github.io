@@ -1,36 +1,217 @@
-/* General resets */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
+/* Base styles */
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: linear-gradient(to bottom right, rgba(210, 235, 255, 1), rgba(242, 239, 255, 1), rgba(241, 255, 223, 0.3));
-  color: rgba(18, 20, 16, 1);
+    font-family: 'Arial', sans-serif;
+    font-weight: 300;
+    color: rgba(18, 20, 16, 1);
+    margin: 0;
+    background: linear-gradient(to bottom right, rgba(210, 235, 255, 1), rgba(242, 239, 255, 1), rgba(241, 255, 223, 0.3));
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+
+h1, h2 {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(18, 20, 16, 1);
+    transition: color 0.3s; 
+}
+
+a:hover, a:active {
+    color: rgba(255, 2, 222, 1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+header {
+    background-color: transparent;
+}
+
+.spacer {
+  width: 100%;
+  height: 2rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto;
+    background-color: transparent;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+}
+
+.desktop-nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.desktop-nav a {
+    padding: 0.8rem 1.2rem;
+    font-weight: 400;
+    border-radius: 25px; 
+    transition: background-color 0.3s;
+}
+
+.desktop-nav a:hover {
+    background-color: rgba(18, 20, 16, 1);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cta {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.custom-request {
+    background-color: white;
+    color: rgba(53, 19, 203, 1);
+}
+
+.consultation {
+    background: rgba(255, 2, 222, 1);
+    color: white;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer; /* Indicate that it's clickable */
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+}
+
+.mobile-nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Display links in a column */
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Add spacing between links */
+    }
+
+.mobile-nav a {
+    margin-bottom: 0.5rem;
+    border-radius: 25px; 
+    transition: color 0.3s;
+    text-align: center;
+    color: rgba(18, 20, 16, 1); 
+    font-weight: 400;
+    }
+
+    .mobile-nav a:hover {
+        color: rgba(255, 2, 222, 1);
+    }
+
+.mobile-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    }
+    
+.mobile-cta a {
+  background-color: rgba(255, 2, 222, 1);
+    color: rgba(255, 255, 255, 1);
+  
+}
+.mobile-cta-button {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    cursor: pointer; 
+    width: fit-content;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    white-space: nowrap;
+}
+
+main {
+    flex: 1;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: rgba(18, 20, 16, 1);
+}
+
+.hero-content {
+    margin: 3rem auto;
+    padding: 0 1rem;
+    text-align: center;
+    max-width: 1200px; 
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Large heading */
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+}
+
+/* Contact Form Styles */
+
+.responsive-form {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
 }
 
 /* Form Container */
 .form-container {
   background-color: white;
-  padding: 2rem;
+  padding: 2rem 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 800px;
   width: 100%;
 }
 
-/* Form Heading */
-h2 {
-  text-align: left;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
 
 /* Form Group */
 .form-group {
@@ -49,11 +230,15 @@ input, textarea {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
   transition: border-color 0.3s ease;
 }
 
 input::placeholder, textarea::placeholder {
-  font-family: 'DM Sans', sans-serif; /* Placeholder text font */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  
 }
 
 input:focus, textarea:focus {
@@ -68,26 +253,34 @@ textarea {
 }
 
 /* Submit Button */
-button {
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(255, 2, 222, 1);
   color: #fff;
   padding: 0.75rem;
   border: none;
   border-radius: 25px;
-  width: 100%;
+  width: fit-content;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.send-icon {
+    width: 1rem;
+    margin-right: 5px;
+}
+
+.submit-button:hover {
   opacity: 0.8;
 }
 
 /* Error Messages */
 .error-message {
   color: #D8000C;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-top: 0.25rem;
 }
 
@@ -121,4 +314,166 @@ button:hover {
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
+}
+
+footer {
+    padding: 3rem 1rem;
+    color: rgba(18, 20, 16, 1);
+    background: transparent;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.footer-column {
+    flex: 1 1 30%;
+    margin-bottom: 1rem; 
+}
+
+.footer-column ul {
+  gap: 1rem;
+}
+
+.footer-column li a {
+  text-decoration: none;
+  color: rgba(18, 20, 16, 1);
+  line-height: 1.6;
+}
+
+.footer-column li a:hover {
+  color: rgba(255, 2, 222, 1);
+}
+
+/* Increase the width of the first column */
+.footer-column:first-child {
+    flex: 1 1 40%; /* Adjust this value as needed */
+}
+
+.footer-column h3 {
+    margin-bottom: 1rem;
+}
+
+.inner-padding {
+  padding-right: 1rem;
+}
+
+/* Base styles for social icons */
+.social-icons {
+    display: flex;
+    gap: 0.5rem; 
+}
+
+/* Style for the clickable circle around each icon */
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem; 
+    height: 3rem; 
+    border-radius: 50%; 
+    background-color: rgba(255, 2, 222, 1); 
+    text-decoration: none; 
+}
+
+/* Style for the images inside the circles */
+.icon-circle img {
+    width: 1rem; 
+    height: 1rem; 
+}
+
+
+.separator {
+    max-width: 1200px;
+    margin: 1rem auto;
+    border: none;
+    border-top: 1px solid rgba(52, 52, 52, 1);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 1rem auto;
+}
+
+.footer-bottom p, .footer-bottom a {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: rgba(18, 20, 16, 1);
+}
+
+.footer-bottom a:hover {
+  color: rgba(255, 2, 222, 1);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+    
+    .header-container {
+      margin: 1rem auto;
+    }
+  
+    .hero-content {
+      margin: 2rem auto;
+      text-align: left;
+    }
+    
+    .mobile-menu-toggle {
+        display: inline; 
+    }
+    
+    .mobile-menu-toggle img {
+        width: 2rem;
+    }
+
+    .desktop-nav, .cta-buttons {
+        display: none;
+    }
+
+    .mobile-nav[aria-hidden="false"] {
+        display: flex; /* Show mobile menu when active */
+    }
+    
+    .project-snippet__button {
+      width: 60%;
+    }
+    
+    .footer-container {
+        flex-direction: column; /* Stack footer columns on mobile */
+    }
+    
+    .footer-bottom p, .footer-bottom a {
+      font-size: 0.7rem;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-container {
+        flex-wrap: wrap; /* Allow wrapping for tablet */
+    }
+
+    .footer-column {
+        flex: 1 1 45%; /* Two columns on tablet */
+        margin-bottom: 1rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    .footer-column {
+        flex: 1 1 20%; /* Four columns on desktop */
+    }
 }
