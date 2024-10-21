@@ -1,7 +1,10 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('active');
-});
+        mobileMenuToggle.addEventListener('click', () => {
+            const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuToggle.setAttribute('aria-expanded', !expanded);
+            mobileMenu.setAttribute('aria-hidden', expanded);
+        });
+  
+  
