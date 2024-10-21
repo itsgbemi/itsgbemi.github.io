@@ -103,6 +103,10 @@ header {
     color: white;
 }
 
+.consultation:hover, .consultation:active {
+    color: black;
+}
+
 .mobile-menu-toggle {
     display: none;
     background: none;
