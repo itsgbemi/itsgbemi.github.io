@@ -1,133 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GitHub page of Gbemisola Oyeniyi">
-  <meta name="keywords" content="Gbemisola Oyeniyi, Frontend Dev, GitHub Page, Portfolio, Website Development, Frontend, HTML, CSS, JavaScript">
-  <title>Portfolio - Gbemisola Oyeniyi</title>
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;500&family=Righteous&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gbemisola Oyeniyi is a driven creator and strategic thinker, passionate about making herself proud through bold, meaningful work">
+    <meta name="keywords" content="writer, creator, Gbemisola Oyeniyi, marketing">
+    <meta name="author" content="Gbemisola Oyeniyi">
+    <title>Gbemisola Oyeniyi</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon/favicon-48x48.png" sizes="48x48" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Gbemi" />
+<link rel="manifest" href="favicon/site.webmanifest" />
 </head>
 <body>
+    <header role="banner" aria-label="Main navigation" id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Gbemi logo">Gbemi</a>
+            <nav aria-label="Primary navigation" class="desktop-nav">
+                <ul>
+     <li><a href="learn-digital-skills.html">Learn Digital Skills</a></li>
+     <li><a href="sales-and-marketing.html">Sales and Marketing</a></li>
+      <li><a href="shop.html">Websites and Graphics</a></li>    
+      <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta consultation">Get in touch</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+                <img src="icon/black-hamburger.svg" alt="Open navigation menu">
+            </button>
+        </div>
+        <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
+            <ul>
+     <li><a href="learn-digital-skills.html">Learn Digital Skills</a></li>
+     <li><a href="sales-and-marketing.html">Sales and Marketing</a></li>
+      <li><a href="shop.html">Websites and Graphics</a></li>    
+      <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="contact.html" class="mobile-cta-button">Get in touch</a>
+            </div>
+        </nav>
+    </header>
 
-  <header class="hero">
-    <nav class="navbar">
-      <!-- Logo with two images -->
-      <div class="logo">
-        <img src="icon/white-star.svg" alt="Star Fall Icon" class="logo-icon" />
-        <img src="image/avatar.jpg" alt="Avatar Image" class="logo-avatar" />
-      </div>
-      
-      <!-- GBEMI text separate from the logo -->
-      <a href="#" class="brand-name">GBEMI</a>
-      
-      <!-- Navigation links -->
-      <ul class="nav-links">
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      
-      <!-- Hamburger menu for mobile -->
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-
-    <!-- Hero content -->
+    <main role="main">
+<section class="hero" aria-labelledby="hero-heading">
     <div class="hero-content">
-         <img src="icon/snake.svg" alt="Snake Icon" class="icon-inline">
-    <img src="icon/cat.svg" alt="Cat Icon" class="icon-inline">
-      <h1>quirky</h1>
-      <p>Hi, I'm Gbemisola Oyeniyi. Actively watering my skill garden.</p>
-  <a href="contact.html" class="btn">Contact me</a>
+        <h1>Creating proudly. Living boldly. Dreaming freely.</h1>
     </div>
-  </header>
+</section>
+
+<section class="brief-bio">
+        <!-- Column 1: Headshot -->
+        <div class="brief-bio__headshot">
+            <img src="image/gbemi.jpg" alt="Gbemisola Oyeniyi's picture">
+        </div>
+
+    <!-- Column 2: Bio -->
+    <div class="brief-bio__bio">
+    <h2>HELLO THERE</h2>
+    <p>I'm Gbemisola Oyeniyi. For the past three years, I’ve worked with businesses across various industries, including e-commerce and tech, helping them strategize and execute their marketing efforts.</p>
+    
+    <p>While my professional journey has been rewarding, I’m also deeply aware that my growth stems from the wealth of free resources that shaped my knowledge. Now, I want to give back by contributing to that universe—creating, sharing, and adding value through my own knowledge and insights.</p>
+    
+    <p>At heart, I’m a creator. My ultimate dream is to live in a peaceful, remote home, surrounded by nature, where I can write books and create art.</p>
+    
+        </div>
+    </section>
 
 <div class="spacer"></div>
 
-<section id="portfolio">
-  <h2>portfolio</h2>
-  <div class="portfolio-grid">
-    <a href="https://itsgbemi.github.io/frontend-mentor-projects/blogr/" class="portfolio-card" target="_blank">
-      <img src="image/blogrr.jpg" alt="Blogr Landing Page">
-      <h3>Blogr Landing Page</h3>
-      <p>Landing page for a blog using HTML, CSS, and JavaScript, featuring a dropdown menu navigation and multi-column footer.</p>
-    </a>
-    <a href="https://advice-generator-by-gbemi.vercel.app" class="portfolio-card" target="_blank">
-      <img src="image/advice-gen.jpg" alt="Advice Generator App">
-      <h3>Advice Generator App</h3>
-      <p>Receive random advice on life, health, finances, and relationships. Powered by a third-party API and a self-curated JSON database.</p>
-    </a>
-    <a href="https://freeyorubadictionary.vercel.app" class="portfolio-card" target="_blank">
-      <img src="image/yoruba-dic.jpg" alt="Free Online Yorùbá to English Dictionary">
-      <h3>Yorùbá to English Dictionary</h3>
-      <p>Search for the meanings of Yorùbá words and listen to their pronunciations. Built with data synchronized from Google Sheets using Apps Script.</p>
-    </a>
-    
-    
-    <!-- Add more cards as needed -->
-    <a href="https://itsgbemi.github.io/frontend-mentor-projects/social-links/" class="portfolio-card" target="_blank">
-      <img src="image/social-links.jpg" alt="Social Links">
-      <h3>Social Links Profile</h3>
-      <p>Curated my active social links in one place. Built as a solution to a Frontend Mentor Challenge.</p>
-    </a>    
-    <a href="https://itsgbemi.github.io/frontend-mentor-projects/sunnyside-agency/" class="portfolio-card" target="_blank">
-      <img src="image/sunny.jpg" alt="Sunnyside Agency Landing Page">
-      <h3>Sunnyside Agency Landing Page</h3>
-      <p>Landing page for a blog using HTML, CSS, and JavaScript, featuring a dropdown menu navigation and multi-column footer interface and seamless mobile navigation for an enhanced user experience.</p>
-    </a>
-   <a href="https://itsgbemi.github.io/frontend-mentor-projects/snap/" class="portfolio-card" target="_blank">
-      <img src="image/snap.jpg" alt="Dropdown Navigation Website">
-      <h3>Intro Section with Dropdown navigation</h3>
-      <p>Developed a responsive intro section for a landing page featuring a dropdown navigation menu, ensuring seamless user experience across devices.</p>
-    </a>     
-     <!-- New card row -->
-   <a href="https://itsgbemi.github.io/frontend-mentor-projects/launch-countdown-timer/" class="portfolio-card" target="_blank">
-      <img src="image/coming-soon.jpg" alt="Coming Soon Page">
-      <h3>Coming Soon Page</h3>
-      <p>Developed a responsive 'Coming Soon' page featuring a countdown timer, designed to build anticipation and keep users informed.</p>
-      
-      <a href="https://itsgbemi.github.io/frontend-mentor-projects/interactive-comment-section/" class="portfolio-card" target="_blank">
-      <img src="image/interactive-comment-section.jpg" alt="Interactive comment section">
-      <h3>Interactive Comments Section</h3>
-      <p>Developed an interactive comment section with functionality to add, edit, or delete comments using a demo user, with data temporarily stored via JavaScript's local storage.</p>  
-    </a>        
-  <a href="https://itsgbemi.github.io/frontend-mentor-projects
-/pricing-component" class="portfolio-card" target="_blank">
-      <img src="image/pricing-page-component.jpg" alt="Pricing Page Component">
-      <h3>Pricing Page Component</h3>
-      <p>Developed a pricing page component with a toggle feature, allowing users to seamlessly switch between monthly and annual plans.</p>  
-    </a>        
-  </div>
+<section class="services">
+    <div class="services-container">
+
+
+        <!-- Description Column: Text and Button -->
+        <div class="services-description">
+          <h2>LEARN DIGITAL SKILLS</h2>
+            <p>Free tutorials on web development and design, graphics design, marketing, social media management and content writing.</p>
+           <a href="learn.html" class="project-snippet__button">
+                Start learning 
+                <img src="icon/black-redirect.svg" alt="Redirect Icon">
+            </a>            
+        </div>
+  <!-- Decorative Column: Image -->
+    <div class="services-image">
+      <img src="image/tech-wallpaper.jpg" alt="Classic app">
+     </div>        
+   </div>
 </section>
-<footer>
-  <div class="footer-container">
-    <!-- First Column: Copyright -->
-    <div class="footer-left">
-      <span>&copy; Gbemisola Oyeniyi. All rights reserved.</span>
-    </div>
 
-    <!-- Second Column: Social Icons -->
-    <div class="footer-right">
-      <a href="https://github.com/itsgbemi" target="_blank">
-        <img src="icon/github.svg" alt="GitHub">
-      </a>
-      <a href="https://twitter.com/icecoldalvy" target="_blank">
-        <img src="icon/twitter.svg" alt="Twitter">
-      </a>
-      <a href="https://www.linkedin.com/in/gbemisola-oyeniyi-093248210" target="_blank">
-        <img src="icon/linkedin.svg" alt="LinkedIn">
-      </a>
+<section class="services">
+    <div class="services-container">
+
+           <!-- Decorative Column: Image -->
+        <div class="services-image">
+            <img src="image/germination.jpg" alt="Leaf sprouting from soil">
+        </div>     
+        <!-- Description Column: Text and Button -->
+        <div class="services-description">
+          <h2>SALES AND MARKETING PLAYBOOK</h2>
+            <p>A complete guide to mastering sales and marketing, crafted for entrepreneurs and digital professionals. Access strategies to increase sales, sharpen your marketing, and drive business growth in the digital era.</p>
+           <a href="#" class="project-snippet__button">
+                Access playbook 
+                <img src="icon/black-redirect.svg" alt="Redirect Icon">
+            </a>            
+        </div>
+    </div>   
+</section>
+
+<section class="services">
+    <div class="services-container">
+
+
+        <!-- Description Column: Text and Button -->
+        <div class="services-description">
+          <h2>WEBSITE AND DESIGN TEMPLATES</h2>
+            <p>Shop my curated collection of customizable professional websites and graphics design.</p>
+           <a href="shop.html" class="project-snippet__button">
+                Check it out 
+                <img src="icon/black-redirect.svg" alt="Redirect Icon">
+            </a>            
+        </div>
+        <!-- Decorative Column: Image -->
+        <div class="services-image">
+            <img src="image/templates.jpg" alt="Website service sample">
+        </div>        
     </div>
+</section>
+
+
+<section class="client-cta">
+    <p>Let's create something amazing together.
+        <a href="contact.html" class="cta-link">
+            Get in touch<img src="icon/pink-redirect.svg" alt="Redirect Icon">
+        </a>
+    </p>
+</section>
+
+
+
+<div class="spacer"></div>
+    </main>
+
+    <footer aria-label="Footer navigation">
+   <div class="footer-container">
+     <div class="footer-column">
+     <a href="#" class="logo">Gbemisola Oyeniyi</a>
+    <p class="inner-padding">Creating proudly. Living boldly. Dreaming freely.</p>
+      </div>
+    
+     <div class="footer-column">
+     <h3>Information</h3>
+      <ul>
+     <li><a href="learn-digital-skills.html">Learn Digital Skills</a></li>
+     <li><a href="sales-and-marketing.html">Sales and Marketing</a></li>
+      <li><a href="shop.html">Websites and Graphics</a></li>    
+      <li><a href="blog.html">Blog</a></li>
+     </ul>
   </div>
-</footer>
+            
+  <div class="footer-column">
+    <h3>Let's connect</h3>
+    <div class="social-icons">
+        <a href="https://instagram.com/__carryme" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/gbemisola-oyeniyi-093248210" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://twitter.com/icecoldalvy" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://facebook.com/gbemisola.oyeniyi" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/facebook.svg" alt="Facebook">
+        </a>
+    </div>
+</div>
 
-  <script src="script.js"></script>
+        </div>
+        <hr class="separator">
+        <div class="footer-bottom">
+            <p>&copy; 2024. All rights reserved.</p>
+            <a href="https://itsgbemi.github.io">Created by self</a>
+        </div>
+    </footer>
+
+    <script src="script.js">
+    </script>
 </body>
 </html>
