@@ -1,3 +1,13 @@
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuToggle.setAttribute('aria-expanded', !expanded);
+            mobileMenu.setAttribute('aria-hidden', expanded);
+        });
+        
+  // Handle form submission
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
     const formResponse = document.getElementById('formResponse');
