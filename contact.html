@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact - Gbemisola Oyeniyi</title>
-  <link rel="stylesheet" href="contact.css"> <!-- Link to external CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;500&family=Righteous&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gbemisola Oyeniyi is a driven creator and strategic thinker, passionate about making herself proud through bold, meaningful work">
+    <meta name="keywords" content="writer, creator, Gbemisola Oyeniyi, marketing">
+    <meta name="author" content="Gbemisola Oyeniyi">
+    <title>Gbemisola Oyeniyi</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+<link rel="icon" type="image/png" href="favicon/favicon-48x48.png" sizes="48x48" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Gbemi" />
+<link rel="manifest" href="favicon/site.webmanifest" />
 </head>
 <body>
-  <div class="form-container">
-    <h2>Contact Gbemi</h2>
+    <header role="banner" aria-label="Main navigation" id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Gbemi logo">Gbemi</a>
+            <nav aria-label="Primary navigation" class="desktop-nav">
+                <ul>
+     <li><a href="learn-digital-skills.html">Learn Digital Skills</a></li>
+     <li><a href="sales-and-marketing.html">Sales and Marketing</a></li>
+      <li><a href="shop.html">Websites and Graphics</a></li>    
+      <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta consultation">Get in touch</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+                <img src="icon/black-hamburger.svg" alt="Open navigation menu">
+            </button>
+        </div>
+        <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
+            <ul>
+     <li><a href="learn-digital-skills.html">Learn Digital Skills</a></li>
+     <li><a href="sales-and-marketing.html">Sales and Marketing</a></li>
+      <li><a href="shop.html">Websites and Graphics</a></li>    
+      <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="contact.html" class="mobile-cta-button">Get in touch</a>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-content">
+        <h1>Contact Gbemi</h1>
+        <p>Hello. Fill this form and I'll respond shortly.</p>
+    </div>
+</section> 
+
+<!-- Contact Form Section -->
+<section class="responsive-form">
+ <div class="form-container">
     <form id="contactForm" novalidate>
       <!-- Name field -->
       <div class="form-group">
@@ -34,13 +82,61 @@
       </div>
 
       <!-- Submit button -->
-      <button type="submit">Send Message</button>
+      <button class="submit-button" type="submit"><img src="icon/send.svg" alt="Send" class="send-icon">Send Message</button>
 
       <!-- Response message container (for success/error feedback) -->
       <div id="formResponse"></div>
     </form>
   </div>
+</section>
 
-  <script src="contact.js"></script> <!-- Link to external JavaScript -->
+
+<div class="spacer"></div>
+    </main>
+
+    <footer aria-label="Footer navigation">
+   <div class="footer-container">
+     <div class="footer-column">
+     <a href="index.html" class="logo">Gbemisola Oyeniyi</a>
+    <p class="inner-padding">Creating proudly. Living boldly. Dreaming freely.</p>
+      </div>
+    
+     <div class="footer-column">
+     <h3>Information</h3>
+      <ul>
+     <li><a href="learn-digital-skills.html">Learn Digital Skills</a></li>
+     <li><a href="sales-and-marketing.html">Sales and Marketing</a></li>
+      <li><a href="shop.html">Websites and Graphics</a></li>    
+      <li><a href="blog.html">Blog</a></li>
+  </div>
+            
+  <div class="footer-column">
+    <h3>Let's connect</h3>
+    <div class="social-icons">
+        <a href="https://instagram.com/__carryme/" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/gbemisola-oyeniyi-093248210" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://twitter.com/icecoldalvy" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://facebook.com" class="icon-circle" target="_blank" rel="noopener noreferrer">
+            <img src="icon/facebook.svg" alt="Facebook">
+        </a>
+    </div>
+</div>
+
+        </div>
+        <hr class="separator">
+        <div class="footer-bottom">
+            <p>&copy; 2024. All rights reserved.</p>
+            <a href="https://itsgbemi.github.io">Created by self</a>
+        </div>
+    </footer>
+
+    <script src="contact.js">
+    </script>
 </body>
 </html>
