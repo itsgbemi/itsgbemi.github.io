@@ -212,6 +212,10 @@ main {
   margin-bottom: 20px;
 }
 
+.content-list a {
+  text-decoration: underline;
+}
+
 /* Share Buttons Container */
 .share-buttons {
   background-color: rgba(253, 63, 219, 1); /* Equivalent of #fd3fdb */
