@@ -422,7 +422,7 @@ footer {
 
 .footer-bottom p, .footer-bottom a {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 0.7rem;
 }
 
 .footer-bottom a {
@@ -471,10 +471,6 @@ footer {
     
     .footer-container {
         flex-direction: column; /* Stack footer columns on mobile */
-    }
-    
-    .footer-bottom p, .footer-bottom a {
-      font-size: 0.7rem;
     }
 }
 
