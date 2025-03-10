@@ -292,7 +292,14 @@ Additionally, I manage the Google Business profile, keeping information accurate
 
     <script src="script.js">
     </script>
-    <script> window.CrowdApp = window.CrowdApp || {}; CrowdApp.crowd_token = "ZDA0ODdhNWYtY2NiZC00MmVhLTg1M2UtN2NlNTAxMWU3NmVlOmVmZTkwYjU1LTJlNjQtNDU3My04NTJlLWE4ZmEyMjM3NGY1YQ=="; CrowdApp.environment = 'staging';(function (d) {var s = d.createElement("script");s.type = "module"; var timestamp = new Date().getTime(); s.id = "crowd-io-application"; s.src ="https://extension.crowdapp.io/crowd-library/crowd-extension.js?v="+ timestamp;(d.head || d.body).appendChild(s);})(document); </script>
+  
+              <script>
+              (function() {
+                  fetch("https://api.v2.crowdapp.io/workspace/script?pid=898d58e1-fc5b-4b58-ac7f-17fadc093bfc")
+                  .then(response => response.json())
+                  .then(data => {data.data.forEach((e)=>{const sc = document.createElement('script');e.src ? sc.src = e.src : ()=>{};e.defer ? sc.defer = true : ()=>{};e.attributes.forEach((a)=>{sc.setAttribute(a.name,a.value)});e.text ? sc.text = e.text : ()=>{};e.type ? sc.type = e.type : ()=>{};document.head.appendChild(sc)})}).catch(error => console.error('Error loading scripts:', error));
+              })();
+              </script>
 </body>
 </html>
             
