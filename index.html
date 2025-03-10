@@ -24,6 +24,14 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+     
+              <script>
+              (function() {
+                  fetch("https://api.v2.crowdapp.io/workspace/script?pid=dc1cc038-27b3-4961-807b-8cdb9f9b9465")
+                  .then(response => response.json())
+                  .then(data => {data.data.forEach((e)=>{const sc = document.createElement('script');e.src ? sc.src = e.src : ()=>{};e.defer ? sc.defer = true : ()=>{};e.attributes.forEach((a)=>{sc.setAttribute(a.name,a.value)});e.text ? sc.text = e.text : ()=>{};e.type ? sc.type = e.type : ()=>{};document.head.appendChild(sc)})}).catch(error => console.error('Error loading scripts:', error));
+              })();
+              </script>
 </head>
 <body>
     <header role="banner" aria-label="Main navigation" id="main-header">
@@ -292,15 +300,6 @@ Additionally, I manage the Google Business profile, keeping information accurate
 
     <script src="script.js">
     </script>
-  
- 
-              <script>
-              (function() {
-                  fetch("https://api.v2.crowdapp.io/workspace/script?pid=dc1cc038-27b3-4961-807b-8cdb9f9b9465")
-                  .then(response => response.json())
-                  .then(data => {data.data.forEach((e)=>{const sc = document.createElement('script');e.src ? sc.src = e.src : ()=>{};e.defer ? sc.defer = true : ()=>{};e.attributes.forEach((a)=>{sc.setAttribute(a.name,a.value)});e.text ? sc.text = e.text : ()=>{};e.type ? sc.type = e.type : ()=>{};document.head.appendChild(sc)})}).catch(error => console.error('Error loading scripts:', error));
-              })();
-              </script>
 </body>
 </html>
             
