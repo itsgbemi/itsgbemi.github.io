@@ -71,6 +71,15 @@ rgba(255, 240, 210, 0.9) 70%,
 rgba(255, 224, 200, 1) 85%,
 rgba(255, 208, 188, 1) 100%
 );
+
+--gradient-dark: linear-gradient(
+to bottom right,
+rgba(40, 40, 45, 1) 0%,
+rgba(30, 35, 40, 0.9) 40%,
+rgba(35, 30, 40, 0.9) 70%,
+rgba(40, 25, 35, 1) 85%,
+rgba(45, 20, 30, 1) 100%
+);
 }
 
 html {
@@ -151,6 +160,18 @@ width: 100%;
 margin: 0 auto;
 }
 
+body.dark-mode {
+background-color: #222;
+color: #f0f0f0;
+--color-primary: #f0f0f0;
+--color-secondary: #ccc;
+--color-light: #333;
+--color-lighter: #444;
+--color-white: #222;
+--color-gray: #555;
+--color-dark-gray: #666;
+}
+
 .skip-link {
 position: absolute;
 left: -9999px;
@@ -170,9 +191,14 @@ flex: 1;
 }
 
 header {
+position: relative;
 padding: 1rem;
 text-align: center;
 background: var(--gradient);
+}
+
+body.dark-mode header {
+background: var(--gradient-dark);
 }
 
 .logo {
@@ -201,6 +227,10 @@ width: 100%;
 text-align: center;
 }
 
+body.dark-mode .hero {
+background: #222;
+}
+
 .pre-heading {
 font-size: 0.9rem;
 letter-spacing: 0.2em;
@@ -215,6 +245,15 @@ margin-bottom: 1.5rem;
 .hero p {
 max-width: 600px;
 margin-bottom: 2rem;
+}
+
+.hero-video {
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+border-radius: var(--radius-md);
+overflow: hidden;
+box-shadow: var(--shadow-md);
 }
 
 .btn {
@@ -491,6 +530,10 @@ text-align: center;
 margin-top: auto;
 }
 
+body.dark-mode footer {
+background: var(--gradient-dark);
+}
+
 .footer-nav {
 display: flex;
 justify-content: center;
@@ -561,6 +604,7 @@ max-height: 80vh;
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
+
 <header>
 <a href="/"><img src="/assets/images/gbemisola-oyeniyi.svg" alt="Gbemisola Oyeniyi Logo" class="logo"></a>
 </header>
@@ -570,6 +614,12 @@ max-height: 80vh;
 <p class="pre-heading">✨ HELLO WORLD</p>
 <h1>A Little About Me</h1>
 <p>I suppose you could call me a walking contradiction. I'm a go-getter who loves making things happen but also a lazy creative. Right now, I'm fully leaning into the possibilities of AI to power open source projects and digital businesses.</p>
+<div class="hero-video">
+<video width="100%" height="auto" autoplay loop muted playsinline poster="/assets/images/scrapbook.png">
+<source src="/assets/video/scrapbook.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
 </section>
 
 <section class="section" id="projects">
@@ -596,8 +646,8 @@ View
 <a href="https://github.com/zysculpt" class="feature-card" target="_blank" rel="noopener noreferrer">
 <div class="feature-icon">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-  <path d="M16 3h-8v4h8V3z"></path>
+<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+<path d="M16 3h-8v4h8V3z"></path>
 </svg>
 </div>
 <h3>Zysculpt</h3>
@@ -679,10 +729,39 @@ View
 <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 011.25 1.25A1.25 1.25 0 0117.25 8A1.25 1.25 0 0116 6.75a1.25 1.25 0 011.25-1.25M12 7a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5m0 2a3 3 0 00-3 3 3 3 0 003 3 3 3 0 003-3 3 3 0 00-3-3z"/>
 </svg>
 </a>
+<a href="mailto:hi@gbemisolaoyeniyi.com?subject=Hello%20from%20your%20website&body=Hi%20Gbemisola,%20I%20just%20visited%20your%20website%20and%20wanted%20to%20reach%20out." aria-label="Email">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+</svg>
+</a>
 </div>
 <div class="copyright">
 &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved.
 </div>
 </footer>
+
+<script>
+// Video autoplay/pause on scroll
+const video = document.querySelector('.hero-video video');
+let isVideoPlaying = false;
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+if (!isVideoPlaying) {
+video.play();
+isVideoPlaying = true;
+}
+} else {
+if (isVideoPlaying) {
+video.pause();
+isVideoPlaying = false;
+}
+}
+});
+}, { threshold: 0.5 });
+
+observer.observe(video);
+</script>
 </body>
 </html>
