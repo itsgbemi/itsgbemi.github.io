@@ -9,10 +9,8 @@
 <meta name="author" content="Gbemisola Oyeniyi">
 <meta name="theme-color" content="#ff7707">
 <meta name="robots" content="index, follow">
-
 <link rel="canonical" href="https://gbemisolaoyeniyi.com">
 <link rel="alternate" href="https://gbemisolaoyeniyi.com" hreflang="en">
-
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -20,7 +18,6 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#6a40a6">
-
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gbemisolaoyeniyi.com">
 <meta property="og:title" content="Gbemisola Oyeniyi | Creator of Outparse & Zysculpt">
@@ -28,8 +25,6 @@
 <meta property="og:image" content="https://gbemisolaoyeniyi.com/assets/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@oliveajike">
 <meta name="twitter:creator" content="@oliveajike">
@@ -37,35 +32,31 @@
 <meta name="twitter:title" content="Gbemisola Oyeniyi | Creator of Outparse & Zysculpt">
 <meta name="twitter:description" content="Official website of Gbemisola Oyeniyi, creator of Outparse and Zysculpt. AI enthusiast building open-source tools.">
 <meta name="twitter:image" content="https://gbemisolaoyeniyi.com/assets/images/og-image.jpg">
-
 <link rel="me" href="https://github.com/itsgbemi">
 <link rel="me" href="https://twitter.com/oliveajike">
 <link rel="me" href="https://www.linkedin.com/in/gbemisola-oyeniyi">
 <link rel="me" href="https://instagram.com/oliveajike">
-
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Gbemisola Oyeniyi",
-  "url": "https://gbemisolaoyeniyi.com",
-  "sameAs": [
-    "https://github.com/itsgbemi",
-    "https://twitter.com/oliveajike",
-    "https://www.linkedin.com/in/gbemisola-oyeniyi",
-    "https://instagram.com/oliveajike"
-  ],
-  "jobTitle": "Software Developer & AI Enthusiast",
-  "description": "Creator of Outparse and Zysculpt, open-source tools for writing and career development.",
-  "image": "https://gbemisolaoyeniyi.com/assets/images/og-image.jpg"
+"@context": "https://schema.org",
+"@type": "Person",
+"name": "Gbemisola Oyeniyi",
+"url": "https://gbemisolaoyeniyi.com",
+"sameAs": [
+"https://github.com/itsgbemi",
+"https://twitter.com/oliveajike",
+"https://www.linkedin.com/in/gbemisola-oyeniyi",
+"https://instagram.com/oliveajike"
+],
+"jobTitle": "Software Developer & AI Enthusiast",
+"description": "Creator of Outparse and Zysculpt, open-source tools for writing and career development.",
+"image": "https://gbemisolaoyeniyi.com/assets/images/og-image.jpg"
 }
 </script>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Lexend:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Lexend:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="preload" href="/assets/video/scrapbook.mp4" as="video" type="video/mp4">
-<link rel="preload" href="/assets/images/gbemisola-oyeniyi.svg" as="image" type="image/svg+xml">
-
+<link rel="preload" href="/assets/images/logo-light.svg" as="image" type="image/svg+xml">
+<link rel="preload" href="/assets/images/logo-dark.svg" as="image" type="image/svg+xml">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <style>
@@ -99,6 +90,12 @@
 --leading-normal: 1.5;
 --leading-relaxed: 1.625;
 --leading-loose: 2;
+--letter-spacing-tight: -0.05em;
+--letter-spacing-normal: 0;
+--letter-spacing-wide: 0.05em;
+--letter-spacing-wider: 0.1em;
+--letter-spacing-widest: 0.2em;
+--current-letter-spacing: var(--letter-spacing-normal);
 --gradient: linear-gradient(
 to bottom right,
 rgba(255, 255, 245, 1) 0%,
@@ -117,6 +114,7 @@ rgba(187, 57, 29, 1) 100%
 );
 --current-font: 'Noto Sans', sans-serif;
 --current-leading: var(--leading-relaxed);
+--current-text-size: var(--text-base);
 }
 html {
 scroll-behavior: smooth;
@@ -126,6 +124,7 @@ font-size: 100%;
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+letter-spacing: var(--current-letter-spacing);
 }
 h1 {
 font-size: var(--text-2xl);
@@ -143,7 +142,7 @@ line-height: var(--leading-snug);
 font-weight: 700;
 }
 p {
-font-size: var(--text-base);
+font-size: var(--current-text-size);
 line-height: var(--current-leading);
 max-width: 65ch;
 }
@@ -210,13 +209,13 @@ left: 0;
 .accessibility-btn {
 position: fixed;
 top: 20px;
-left: 20px;
-z-index: 999;
+left: 10px;
+z-index: 100;
 background: #ff7707;
 color: white;
-width: 50px;
-height: 50px;
-border-radius: 50%;
+width: 44px;
+height: 44px;
+border-radius: var(--radius-sm);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -297,7 +296,7 @@ flex: 1;
 }
 header {
 position: relative;
-padding: 1rem;
+padding: 2rem;
 text-align: center;
 background: var(--gradient);
 }
@@ -314,6 +313,15 @@ justify-content: center;
 gap: 1rem;
 flex-wrap: wrap;
 margin-top: 1rem;
+}
+.nav-button {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.5rem;
+cursor: pointer;
+max-width: 80px;
+transition: var(--transition);
 }
 .hero {
 background: white;
@@ -340,7 +348,7 @@ color: var(--color-secondary);
 margin-bottom: 1.5rem;
 }
 .hero p {
-max-width: 600px;
+max-width: 800px;
 margin-bottom: 2rem;
 }
 .hero-video {
@@ -418,7 +426,6 @@ border: 1px solid #ff7707;
 border-radius: var(--radius-sm);
 box-shadow: var(--shadow-sm);
 }
-
 .modal {
 position: fixed;
 top: 0;
@@ -429,7 +436,7 @@ background: rgba(0,0,0,0.5);
 display: flex;
 justify-content: center;
 align-items: center;
-z-index: 100;
+z-index: 1001;
 display: none;
 overflow-y: auto;
 }
@@ -569,8 +576,6 @@ transition: var(--transition);
 .copyright a:hover {
 border-bottom-color: transparent;
 }
-
-/* New accessibility option styles */
 .option-group {
 margin-bottom: 1.5rem;
 }
@@ -632,6 +637,9 @@ font-family: 'Lexend', sans-serif;
 .font-btn-segoe {
 font-family: 'Segoe UI', sans-serif;
 }
+.font-btn-atkinson {
+font-family: 'Atkinson Hyperlegible', sans-serif;
+}
 @media (max-width: 767px) {
 .modal {
 align-items: flex-end;
@@ -645,22 +653,19 @@ max-height: 80vh;
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
-
 <button class="accessibility-btn" aria-label="Accessibility Options">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
 <path d="M12 2a2 2 0 110 4 2 2 0 010-4zm8 5H4a1 1 0 000 2h7v3.5l-3.1 7.35a1 1 0 001.8.8L12 14.62l2.3 6.03a1 1 0 001.8-.8L13 12.5V9h7a1 1 0 000-2z"/>
 </svg>
 </button>
-
 <header>
-<a href="/"><img src="/assets/images/gbemisola-oyeniyi.svg" alt="Gbemisola Oyeniyi Logo" class="logo"></a>
+<a href="/"><img src="/assets/images/logo-light.svg" alt="Gbemisola Oyeniyi Logo" class="logo" id="siteLogo"></a>
 </header>
-
 <main id="main-content" role="main">
 <section class="hero">
 <p class="pre-heading">✨ HELLO WORLD</p>
 <h1>A Little About Me</h1>
-<p>I love solving hard problems the lazy-smart way: creatively, efficiently, and ideally while reclining. My taste gravitates toward only the best in books, music, and TV. Lately, I've been diving deep into the possibilities of AI to drive open-source projects and build digital businesses.</p>
+<p>I love solving hard problems the lazy-smart way: creatively, efficiently, and ideally from a comfy seat. My taste gravitates toward only the best in books, music, and TV. Lately, I've been diving deep into the possibilities of AI to drive open-source projects and build digital businesses.</p>
 <div class="hero-video">
 <video width="100%" height="auto" autoplay loop muted playsinline poster="/assets/images/scrapbook.png">
 <source src="/assets/video/scrapbook.mp4" type="video/mp4">
@@ -668,7 +673,6 @@ Your browser does not support the video tag.
 </video>
 </div>
 </section>
-
 <section class="section" id="projects">
 <h2 class="section-heading">Projects</h2>
 <div class="features-grid">
@@ -737,7 +741,7 @@ View
 </svg>
 </div>
 <h3>Open Info NG</h3>
-<p>Premier open-source database for Nigeria’s most up-to-date and vital public data.</p>
+<p>Premier open-source database for Nigeria's most up-to-date and vital public data.</p>
 <div class="view-btn">
 View
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -750,7 +754,6 @@ View
 </div>
 </section>
 </main>
-
 <footer>
 <div class="footer-nav">
 <a href="/index.html#projects">Projects</a>
@@ -786,7 +789,6 @@ View
 &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved.
 </div>
 </footer>
-
 <div class="modal" id="accessibilityModal">
 <div class="modal-content">
 <div class="modal-header">
@@ -807,7 +809,6 @@ View
 <button class="option-btn" onclick="setTheme('dark')">Dark</button>
 </div>
 </div>
-
 <div class="option-group">
 <div class="option-header" onclick="toggleOption('font-options')">
 <h3>Change Font</h3>
@@ -820,9 +821,23 @@ View
 <button class="option-btn font-btn-montserrat" onclick="setFont('Montserrat')">Montserrat</button>
 <button class="option-btn font-btn-lexend" onclick="setFont('Lexend')">Lexend</button>
 <button class="option-btn font-btn-segoe" onclick="setFont('Segoe UI')">Segoe UI</button>
+<button class="option-btn font-btn-atkinson" onclick="setFont('Atkinson Hyperlegible')">Atkinson</button>
 </div>
 </div>
-
+<div class="option-group">
+<div class="option-header" onclick="toggleOption('text-size-options')">
+<h3>Text Size</h3>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</div>
+<div class="option-buttons" id="text-size-options">
+<button class="option-btn" onclick="setTextSize('var(--text-sm)')">Small</button>
+<button class="option-btn" onclick="setTextSize('var(--text-base)')">Medium</button>
+<button class="option-btn" onclick="setTextSize('var(--text-md)')">Large</button>
+<button class="option-btn" onclick="setTextSize('var(--text-lg)')">X-Large</button>
+</div>
+</div>
 <div class="option-group">
 <div class="option-header" onclick="toggleOption('line-height-options')">
 <h3>Line Height</h3>
@@ -839,7 +854,21 @@ View
 <button class="option-btn" onclick="setLineHeight('var(--leading-loose)')">Loose</button>
 </div>
 </div>
-
+<div class="option-group">
+<div class="option-header" onclick="toggleOption('letter-spacing-options')">
+<h3>Letter Spacing</h3>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</div>
+<div class="option-buttons" id="letter-spacing-options">
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-tight)')">Tight</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-normal)')">Normal</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-wide)')">Wide</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-wider)')">Wider</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-widest)')">Widest</button>
+</div>
+</div>
 <div class="option-group">
 <div class="toggle-container">
 <h3>Read Aloud</h3>
@@ -852,11 +881,10 @@ View
 </div>
 </div>
 </div>
-
 <script>
+// Video autoplay/pause on scroll
 const video = document.querySelector('.hero-video video');
 let isVideoPlaying = false;
-
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
 if (entry.isIntersecting) {
@@ -872,52 +900,55 @@ isVideoPlaying = false;
 }
 });
 }, { threshold: 0.5 });
-
 observer.observe(video);
+// Accessibility Modal Functionality
 const accessibilityBtn = document.querySelector('.accessibility-btn');
 const accessibilityModal = document.getElementById('accessibilityModal');
 const closeModal = document.querySelector('.close-modal');
 const readAloudToggle = document.getElementById('readAloudToggle');
-
+const siteLogo = document.getElementById('siteLogo');
+// Toggle modal
 accessibilityBtn.addEventListener('click', () => {
 accessibilityModal.style.display = 'flex';
 document.body.classList.add('modal-open');
 });
-
 closeModal.addEventListener('click', () => {
 accessibilityModal.style.display = 'none';
 document.body.classList.remove('modal-open');
 });
-
+// Close modal when clicking outside
 window.addEventListener('click', (e) => {
 if (e.target === accessibilityModal) {
 accessibilityModal.style.display = 'none';
 document.body.classList.remove('modal-open');
 }
 });
-
+// Toggle option sections
 function toggleOption(id) {
 const optionButtons = document.getElementById(id);
 const optionHeader = optionButtons.previousElementSibling;
 optionButtons.classList.toggle('active');
 optionHeader.classList.toggle('active');
 }
-
+// Save settings to localStorage
 function saveSettings(key, value) {
 localStorage.setItem(key, value);
 }
-
+// Get settings from localStorage
 function getSetting(key) {
 return localStorage.getItem(key);
 }
-
+// Theme switcher
 function setTheme(theme) {
 if (theme === 'dark') {
 document.body.classList.add('dark-mode');
+siteLogo.src = '/assets/images/logo-dark.svg';
 } else {
 document.body.classList.remove('dark-mode');
+siteLogo.src = '/assets/images/logo-light.svg';
 }
 saveSettings('theme', theme);
+// Update active button state
 const modeButtons = document.querySelectorAll('#mode-options .option-btn');
 modeButtons.forEach(btn => {
 btn.classList.remove('active');
@@ -927,7 +958,7 @@ btn.classList.add('active');
 }
 });
 }
-
+// Font switcher
 function setFont(font) {
 let fontValue;
 switch(font) {
@@ -943,22 +974,46 @@ break;
 case 'Segoe UI':
 fontValue = "'Segoe UI', sans-serif";
 break;
+case 'Atkinson Hyperlegible':
+fontValue = "'Atkinson Hyperlegible', sans-serif";
+break;
 }
 document.documentElement.style.setProperty('--current-font', fontValue);
 document.body.style.fontFamily = fontValue;
 saveSettings('font', font);
+// Update active button state
 const fontButtons = document.querySelectorAll('#font-options .option-btn');
 fontButtons.forEach(btn => {
 btn.classList.remove('active');
-if (btn.textContent === font) {
+if (btn.textContent === font || (font === 'Atkinson Hyperlegible' && btn.textContent === 'Atkinson')) {
 btn.classList.add('active');
 }
 });
 }
-
+// Text size switcher
+function setTextSize(size) {
+document.documentElement.style.setProperty('--current-text-size', size);
+saveSettings('textSize', size);
+// Update active button state
+const textSizeButtons = document.querySelectorAll('#text-size-options .option-btn');
+textSizeButtons.forEach(btn => {
+btn.classList.remove('active');
+const sizeMap = {
+'Small': 'var(--text-sm)',
+'Medium': 'var(--text-base)',
+'Large': 'var(--text-md)',
+'X-Large': 'var(--text-lg)'
+};
+if (sizeMap[btn.textContent] === size) {
+btn.classList.add('active');
+}
+});
+}
+// Line height switcher
 function setLineHeight(height) {
 document.documentElement.style.setProperty('--current-leading', height);
 saveSettings('lineHeight', height);
+// Update active button state
 const lineHeightButtons = document.querySelectorAll('#line-height-options .option-btn');
 lineHeightButtons.forEach(btn => {
 btn.classList.remove('active');
@@ -975,10 +1030,29 @@ btn.classList.add('active');
 }
 });
 }
-
+// Letter spacing switcher
+function setLetterSpacing(spacing) {
+document.documentElement.style.setProperty('--current-letter-spacing', spacing);
+saveSettings('letterSpacing', spacing);
+// Update active button state
+const letterSpacingButtons = document.querySelectorAll('#letter-spacing-options .option-btn');
+letterSpacingButtons.forEach(btn => {
+btn.classList.remove('active');
+const spacingMap = {
+'Tight': 'var(--letter-spacing-tight)',
+'Normal': 'var(--letter-spacing-normal)',
+'Wide': 'var(--letter-spacing-wide)',
+'Wider': 'var(--letter-spacing-wider)',
+'Widest': 'var(--letter-spacing-widest)'
+};
+if (spacingMap[btn.textContent] === spacing) {
+btn.classList.add('active');
+}
+});
+}
+// Read aloud functionality
 let speechSynthesis = window.speechSynthesis;
 let utterance = null;
-
 readAloudToggle.addEventListener('change', (e) => {
 if (e.target.checked) {
 startReadAloud();
@@ -987,7 +1061,6 @@ stopReadAloud();
 }
 saveSettings('readAloud', e.target.checked);
 });
-
 function startReadAloud() {
 stopReadAloud();
 const mainContent = document.querySelector('main');
@@ -998,47 +1071,61 @@ utterance.pitch = 1;
 utterance.volume = 1;
 speechSynthesis.speak(utterance);
 }
-
 function stopReadAloud() {
 if (speechSynthesis.speaking) {
 speechSynthesis.cancel();
 }
 }
-
+// Load saved settings on page load
 function loadSettings() {
+// Theme
 const savedTheme = getSetting('theme');
 if (savedTheme) {
 setTheme(savedTheme);
 } else {
-
+// Check for prefers-color-scheme if no saved theme
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 setTheme('dark');
 } else {
 setTheme('light');
 }
 }
-
+// Font
 const savedFont = getSetting('font');
 if (savedFont) {
 setFont(savedFont);
 } else {
 setFont('Noto Sans');
 }
-
+// Text size
+const savedTextSize = getSetting('textSize');
+if (savedTextSize) {
+setTextSize(savedTextSize);
+} else {
+setTextSize('var(--text-base)');
+}
+// Line height
 const savedLineHeight = getSetting('lineHeight');
 if (savedLineHeight) {
 setLineHeight(savedLineHeight);
 } else {
 setLineHeight('var(--leading-relaxed)');
 }
-
+// Letter spacing
+const savedLetterSpacing = getSetting('letterSpacing');
+if (savedLetterSpacing) {
+setLetterSpacing(savedLetterSpacing);
+} else {
+setLetterSpacing('var(--letter-spacing-normal)');
+}
+// Read aloud
 const savedReadAloud = getSetting('readAloud');
 if (savedReadAloud === 'true') {
 readAloudToggle.checked = true;
 startReadAloud();
 }
 }
-
+// Initialize settings when page loads
 document.addEventListener('DOMContentLoaded', () => {
 loadSettings();
 });
