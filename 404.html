@@ -8,9 +8,7 @@
 <meta name="author" content="Gbemisola Oyeniyi">
 <meta name="theme-color" content="#ff7707">
 <meta name="robots" content="noindex, nofollow">
-
 <link rel="canonical" href="https://gbemisolaoyeniyi.com/404.html">
-
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -18,21 +16,17 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#6a40a6">
-
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gbemisolaoyeniyi.com/404.html">
 <meta property="og:title" content="Page Not Found | Gbemisola Oyeniyi">
 <meta property="og:description" content="The page you're looking for doesn't exist. Return to Gbemisola Oyeniyi's homepage.">
 <meta property="og:image" content="https://gbemisolaoyeniyi.com/assets/images/og-image.jpg">
-
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@oliveajike">
 <meta name="twitter:title" content="Page Not Found | Gbemisola Oyeniyi">
 <meta name="twitter:description" content="The page you're looking for doesn't exist. Return to Gbemisola Oyeniyi's homepage.">
 <meta name="twitter:image" content="https://gbemisolaoyeniyi.com/assets/images/og-image.jpg">
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Lexend:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Lexend:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="preload" href="/assets/images/gbemisola-oyeniyi.svg" as="image" type="image/svg+xml">
 <style>
 :root {
@@ -49,7 +43,6 @@
 --radius-md: 8px;
 --transition: all 0.2s ease-in-out;
 --max-width: 1200px;
-
 --text-xs: 0.75rem; 
 --text-sm: 0.875rem;
 --text-base: 1rem;  
@@ -60,14 +53,18 @@
 --text-3xl: 2.25rem;
 --text-4xl: 3rem; 
 --text-5xl: 3.75rem;  
-
 --leading-none: 1;
 --leading-tight: 1.25;
 --leading-snug: 1.375;
 --leading-normal: 1.5;
 --leading-relaxed: 1.625;
 --leading-loose: 2;
-
+--letter-spacing-tight: -0.05em;
+--letter-spacing-normal: 0;
+--letter-spacing-wide: 0.05em;
+--letter-spacing-wider: 0.1em;
+--letter-spacing-widest: 0.2em;
+--current-letter-spacing: var(--letter-spacing-normal);
 --gradient: linear-gradient(
 to bottom right,
 rgba(255, 255, 245, 1) 0%,
@@ -86,72 +83,62 @@ rgba(187, 57, 29, 1) 100%
 );
 --current-font: 'Noto Sans', sans-serif;
 --current-leading: var(--leading-relaxed);
+--current-text-size: var(--text-base);
 }
-
 html {
 scroll-behavior: smooth;
 font-size: 100%; 
 }
-
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+letter-spacing: var(--current-letter-spacing);
 }
-
 h1 {
 font-size: var(--text-2xl);
 line-height: var(--leading-tight);
 font-weight: 700;
 }
-
 h2 {
 font-size: var(--text-xl);
 line-height: var(--leading-tight);
 font-weight: 700;
 }
-
 h3 {
 font-size: var(--text-lg);
 line-height: var(--leading-snug);
 font-weight: 700;
 }
-
 p {
-font-size: var(--text-base);
+font-size: var(--current-text-size);
 line-height: var(--current-leading);
 max-width: 65ch;
 }
-
 .small-text {
 font-size: var(--text-sm);
 line-height: var(--leading-normal);
 }
-
 a {
 color: var(--color-primary);
 text-decoration: none;
 transition: var(--transition);
 outline: none;
 }
-
 a:hover,
 a:focus {
 color: var(--color-focus);
 text-decoration-thickness: 2px;
 }
-
 a:active {
 color: var(--color-secondary);
 text-decoration-thickness: 2px;
 }
-
 a:focus-visible {
 outline: 2px solid var(--color-focus);
 outline-offset: 2px;
 border-radius: var(--radius-sm);
 }
-
 body {
 display: flex;
 flex-direction: column;
@@ -165,7 +152,6 @@ max-width: 1440px;
 width: 100%;
 margin: 0 auto;
 }
-
 body.dark-mode {
 background-color: #222;
 color: #f0f0f0;
@@ -177,7 +163,6 @@ color: #f0f0f0;
 --color-gray: #555;
 --color-dark-gray: #666;
 }
-
 .skip-link {
 position: absolute;
 left: -9999px;
@@ -187,21 +172,19 @@ color: white;
 padding: 1rem;
 z-index: 1000;
 }
-
 .skip-link:focus {
 left: 0;
 }
-
 .accessibility-btn {
 position: fixed;
 top: 20px;
-left: 20px;
-z-index: 999;
+left: 10px;
+z-index: 100;
 background: #ff7707;
 color: white;
-width: 50px;
-height: 50px;
-border-radius: 50%;
+width: 44px;
+height: 44px;
+border-radius: var(--radius-sm);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -210,23 +193,19 @@ box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 transition: all 0.3s ease;
 border: none;
 }
-
 .accessibility-btn:hover {
 transform: scale(1.1);
 }
-
 .accessibility-btn svg {
 width: 24px;
 height: 24px;
 }
-
 .modal-header {
 display: flex;
 justify-content: space-between;
 align-items: center;
 margin-bottom: 1rem;
 }
-
 .close-modal {
 background: none;
 border: none;
@@ -234,7 +213,6 @@ cursor: pointer;
 font-size: 1.5rem;
 color: var(--color-secondary);
 }
-
 .toggle-switch {
 position: relative;
 display: inline-block;
@@ -242,13 +220,11 @@ width: 60px;
 height: 34px;
 margin-left: 1rem;
 }
-
 .toggle-switch input {
 opacity: 0;
 width: 0;
 height: 0;
 }
-
 .toggle-slider {
 position: absolute;
 cursor: pointer;
@@ -260,7 +236,6 @@ background-color: var(--color-gray);
 transition: .4s;
 border-radius: 34px;
 }
-
 .toggle-slider:before {
 position: absolute;
 content: "";
@@ -272,15 +247,12 @@ background-color: white;
 transition: .4s;
 border-radius: 50%;
 }
-
 input:checked + .toggle-slider {
 background-color: #ff7707;
 }
-
 input:checked + .toggle-slider:before {
 transform: translateX(26px);
 }
-
 .toggle-container {
 display: flex;
 align-items: center;
@@ -288,27 +260,22 @@ justify-content: space-between;
 width: 100%;
 margin-bottom: 1.5rem;
 }
-
 main {
 flex: 1;
 }
-
 header {
 position: relative;
 padding: 1rem;
 text-align: center;
 background: var(--gradient);
 }
-
 body.dark-mode header {
 background: var(--gradient-dark);
 }
-
 .logo {
 max-width: 250px;
 height: auto;
 }
-
 .nav-buttons {
 display: flex;
 justify-content: center;
@@ -316,7 +283,6 @@ gap: 1rem;
 flex-wrap: wrap;
 margin-top: 1rem;
 }
-
 .hero {
 background: white;
 display: flex;
@@ -329,27 +295,22 @@ max-width: var(--max-width);
 width: 100%;
 text-align: center;
 }
-
 body.dark-mode .hero {
 background: #222;
 }
-
 .pre-heading {
 font-size: 0.9rem;
 letter-spacing: 0.2em;
 text-transform: uppercase;
 color: var(--color-secondary);
 }
-
 .hero h1 {
 margin-bottom: 1.5rem;
 }
-
 .hero p {
 max-width: 600px;
 margin-bottom: 2rem;
 }
-
 .btn {
 padding: 0.5rem 1rem;
 background: var(--color-white);
@@ -362,19 +323,16 @@ transition: var(--transition);
 text-decoration: none;
 font-weight: 700;
 }
-
 .btn:hover {
 opacity: 0.9;
 transform: translateY(-2px);
 }
-
 .section {
 padding: 4rem 2rem;
 max-width: var(--max-width);
 margin: 0 auto;
 width: 100%;
 }
-
 .section-heading {
 text-align: center;
 font-size: 0.9rem;
@@ -383,7 +341,6 @@ text-transform: uppercase;
 margin-bottom: 3rem;
 color: var(--color-secondary);
 }
-
 .modal {
 position: fixed;
 top: 0;
@@ -394,15 +351,13 @@ background: rgba(0,0,0,0.5);
 display: flex;
 justify-content: center;
 align-items: center;
-z-index: 100;
+z-index: 1001;
 display: none;
 overflow-y: auto;
 }
-
 body.modal-open {
 overflow: hidden;
 }
-
 .modal-content {
 background: var(--color-white);
 padding: 2rem 1.5rem;
@@ -413,32 +368,26 @@ box-shadow: var(--shadow-md);
 max-height: 90vh;
 overflow-y: auto;
 }
-
 .modal-content::-webkit-scrollbar {
 width: 8px;
 }
-
 .modal-content::-webkit-scrollbar-track {
 background: var(--color-lighter);
 border-radius: 10px;
 }
-
 .modal-content::-webkit-scrollbar-thumb {
 background-color: var(--color-gray);
 border-radius: 10px;
 }
-
 .modal-content::-webkit-scrollbar-thumb:hover {
 background-color: var(--color-secondary);
 }
-
 .modal-buttons {
 display: flex;
 justify-content: flex-end;
 gap: 1rem;
 margin-top: 1rem;
 }
-
 .modal-buttons button {
 padding: 0.5rem 1rem;
 border: none;
@@ -446,57 +395,46 @@ border-radius: var(--radius-sm);
 cursor: pointer;
 transition: var(--transition);
 }
-
 .confirm-btn {
 background: var(--color-primary);
 color: var(--color-white);
 }
-
 .confirm-btn:hover {
 opacity: 0.9;
 }
-
 .cancel-btn {
 background: var(--color-light);
 }
-
 .cancel-btn:hover {
 background: var(--color-dark-gray);
 }
-
 .modal-options {
 display: flex;
 flex-direction: column;
 gap: 1.5rem;
 margin: 1rem 0;
 }
-
 .modal-option {
 background: var(--color-lighter);
 padding: 1rem;
 border-radius: var(--radius-md);
 transition: var(--transition);
 }
-
 .modal-option:hover {
 transform: translateY(-2px);
 box-shadow: var(--shadow-sm);
 }
-
 .modal-option h3 {
 margin-bottom: 0.5rem;
 }
-
 .modal-option p {
 color: var(--color-secondary);
 }
-
 .modal-description {
 margin-bottom: 1.5rem;
 color: var(--color-secondary);
 font-size: var(--text-sm);
 }
-
 footer {
 width: 100%;
 background: var(--gradient);
@@ -504,11 +442,9 @@ padding: 3rem 2rem;
 text-align: center;
 margin-top: auto;
 }
-
 body.dark-mode footer {
 background: var(--gradient-dark);
 }
-
 .footer-nav {
 display: flex;
 justify-content: center;
@@ -516,66 +452,45 @@ gap: 2rem;
 margin-bottom: 1.5rem;
 flex-wrap: wrap;
 }
-
 .footer-nav a {
 text-decoration: none;
 color: var(--color-primary);
 transition: var(--transition);
 }
-
 .footer-nav a:hover {
 color: var(--color-secondary);
 }
-
 .social-icons {
 display: flex;
 justify-content: center;
 gap: 1.5rem;
 margin-bottom: 1.5rem;
 }
-
 .social-icons a {
 display: inline-block;
 transition: var(--transition);
 }
-
 .social-icons a:hover {
 transform: translateY(-2px);
 }
-
 .social-icons svg {
 width: 24px;
 height: 24px;
 color: var(--color-primary);
 }
-
 .copyright {
 font-size: 0.9rem;
 color: var(--color-secondary);
 }
-
 .copyright a {
 text-decoration: none;
 color: var(--color-primary);
 border-bottom: 1px dotted var(--color-primary);
 transition: var(--transition);
 }
-
 .copyright a:hover {
 border-bottom-color: transparent;
 }
-
-@media (max-width: 767px) {
-.modal {
-align-items: flex-end;
-}
-.modal-content {
-width: 100%;
-max-height: 80vh;
-}
-}
-
-/* New accessibility option styles */
 .option-group {
 margin-bottom: 1.5rem;
 }
@@ -637,6 +552,18 @@ font-family: 'Lexend', sans-serif;
 .font-btn-segoe {
 font-family: 'Segoe UI', sans-serif;
 }
+.font-btn-atkinson {
+font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+@media (max-width: 767px) {
+.modal {
+align-items: flex-end;
+}
+.modal-content {
+width: 100%;
+max-height: 80vh;
+}
+}
 </style>
 </head>
 <body>
@@ -649,7 +576,7 @@ font-family: 'Segoe UI', sans-serif;
 </button>
 
 <header>
-<a href="/"><img src="/assets/images/gbemisola-oyeniyi.svg" alt="Gbemisola Oyeniyi Logo" class="logo"></a>
+<a href="/"><img src="/assets/images/gbemisola-oyeniyi.svg" alt="Gbemisola Oyeniyi Logo" class="logo" id="siteLogo"></a>
 </header>
 
 <main id="main-content" role="main">
@@ -730,6 +657,22 @@ font-family: 'Segoe UI', sans-serif;
 <button class="option-btn font-btn-montserrat" onclick="setFont('Montserrat')">Montserrat</button>
 <button class="option-btn font-btn-lexend" onclick="setFont('Lexend')">Lexend</button>
 <button class="option-btn font-btn-segoe" onclick="setFont('Segoe UI')">Segoe UI</button>
+<button class="option-btn font-btn-atkinson" onclick="setFont('Atkinson Hyperlegible')">Atkinson</button>
+</div>
+</div>
+
+<div class="option-group">
+<div class="option-header" onclick="toggleOption('text-size-options')">
+<h3>Text Size</h3>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</div>
+<div class="option-buttons" id="text-size-options">
+<button class="option-btn" onclick="setTextSize('var(--text-sm)')">Small</button>
+<button class="option-btn" onclick="setTextSize('var(--text-base)')">Medium</button>
+<button class="option-btn" onclick="setTextSize('var(--text-md)')">Large</button>
+<button class="option-btn" onclick="setTextSize('var(--text-lg)')">X-Large</button>
 </div>
 </div>
 
@@ -747,6 +690,22 @@ font-family: 'Segoe UI', sans-serif;
 <button class="option-btn" onclick="setLineHeight('var(--leading-normal)')">Normal</button>
 <button class="option-btn" onclick="setLineHeight('var(--leading-relaxed)')">Relaxed</button>
 <button class="option-btn" onclick="setLineHeight('var(--leading-loose)')">Loose</button>
+</div>
+</div>
+
+<div class="option-group">
+<div class="option-header" onclick="toggleOption('letter-spacing-options')">
+<h3>Letter Spacing</h3>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</div>
+<div class="option-buttons" id="letter-spacing-options">
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-tight)')">Tight</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-normal)')">Normal</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-wide)')">Wide</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-wider)')">Wider</button>
+<button class="option-btn" onclick="setLetterSpacing('var(--letter-spacing-widest)')">Widest</button>
 </div>
 </div>
 
@@ -769,6 +728,7 @@ const accessibilityBtn = document.querySelector('.accessibility-btn');
 const accessibilityModal = document.getElementById('accessibilityModal');
 const closeModal = document.querySelector('.close-modal');
 const readAloudToggle = document.getElementById('readAloudToggle');
+const siteLogo = document.getElementById('siteLogo');
 
 // Toggle modal
 accessibilityBtn.addEventListener('click', () => {
@@ -811,8 +771,10 @@ return localStorage.getItem(key);
 function setTheme(theme) {
 if (theme === 'dark') {
 document.body.classList.add('dark-mode');
+siteLogo.src = '/assets/images/logo-dark.svg';
 } else {
 document.body.classList.remove('dark-mode');
+siteLogo.src = '/assets/images/logo-light.svg';
 }
 saveSettings('theme', theme);
 // Update active button state
@@ -842,6 +804,9 @@ break;
 case 'Segoe UI':
 fontValue = "'Segoe UI', sans-serif";
 break;
+case 'Atkinson Hyperlegible':
+fontValue = "'Atkinson Hyperlegible', sans-serif";
+break;
 }
 document.documentElement.style.setProperty('--current-font', fontValue);
 document.body.style.fontFamily = fontValue;
@@ -850,7 +815,27 @@ saveSettings('font', font);
 const fontButtons = document.querySelectorAll('#font-options .option-btn');
 fontButtons.forEach(btn => {
 btn.classList.remove('active');
-if (btn.textContent === font) {
+if (btn.textContent === font || (font === 'Atkinson Hyperlegible' && btn.textContent === 'Atkinson')) {
+btn.classList.add('active');
+}
+});
+}
+
+// Text size switcher
+function setTextSize(size) {
+document.documentElement.style.setProperty('--current-text-size', size);
+saveSettings('textSize', size);
+// Update active button state
+const textSizeButtons = document.querySelectorAll('#text-size-options .option-btn');
+textSizeButtons.forEach(btn => {
+btn.classList.remove('active');
+const sizeMap = {
+'Small': 'var(--text-sm)',
+'Medium': 'var(--text-base)',
+'Large': 'var(--text-md)',
+'X-Large': 'var(--text-lg)'
+};
+if (sizeMap[btn.textContent] === size) {
 btn.classList.add('active');
 }
 });
@@ -873,6 +858,27 @@ const heightMap = {
 'Loose': 'var(--leading-loose)'
 };
 if (heightMap[btn.textContent] === height) {
+btn.classList.add('active');
+}
+});
+}
+
+// Letter spacing switcher
+function setLetterSpacing(spacing) {
+document.documentElement.style.setProperty('--current-letter-spacing', spacing);
+saveSettings('letterSpacing', spacing);
+// Update active button state
+const letterSpacingButtons = document.querySelectorAll('#letter-spacing-options .option-btn');
+letterSpacingButtons.forEach(btn => {
+btn.classList.remove('active');
+const spacingMap = {
+'Tight': 'var(--letter-spacing-tight)',
+'Normal': 'var(--letter-spacing-normal)',
+'Wide': 'var(--letter-spacing-wide)',
+'Wider': 'var(--letter-spacing-wider)',
+'Widest': 'var(--letter-spacing-widest)'
+};
+if (spacingMap[btn.textContent] === spacing) {
 btn.classList.add('active');
 }
 });
@@ -931,12 +937,28 @@ setFont(savedFont);
 setFont('Noto Sans');
 }
 
+// Text size
+const savedTextSize = getSetting('textSize');
+if (savedTextSize) {
+setTextSize(savedTextSize);
+} else {
+setTextSize('var(--text-base)');
+}
+
 // Line height
 const savedLineHeight = getSetting('lineHeight');
 if (savedLineHeight) {
 setLineHeight(savedLineHeight);
 } else {
 setLineHeight('var(--leading-relaxed)');
+}
+
+// Letter spacing
+const savedLetterSpacing = getSetting('letterSpacing');
+if (savedLetterSpacing) {
+setLetterSpacing(savedLetterSpacing);
+} else {
+setLetterSpacing('var(--letter-spacing-normal)');
 }
 
 // Read aloud
