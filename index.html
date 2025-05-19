@@ -38,19 +38,103 @@
 <link rel="me" href="https://instagram.com/oliveajike">
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@type": "Person",
-"name": "Gbemisola Oyeniyi",
-"url": "https://gbemisolaoyeniyi.com",
-"sameAs": [
-"https://github.com/itsgbemi",
-"https://twitter.com/oliveajike",
-"https://www.linkedin.com/in/gbemisola-oyeniyi",
-"https://instagram.com/oliveajike"
-],
-"jobTitle": "Software Developer & AI Enthusiast",
-"description": "Creator of Outparse and Zysculpt, open-source tools for writing and career development.",
-"image": "https://gbemisolaoyeniyi.com/assets/images/og-image.jpg"
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gbemisola Oyeniyi",
+  "url": "https://gbemisolaoyeniyi.com",
+  "image": "https://gbemisolaoyeniyi.com/assets/images/og-image.jpg",
+  "description": "Nigerian software developer and AI enthusiast building open-source tools for writing and career development.",
+  "sameAs": [
+    "https://github.com/itsgbemi",
+    "https://twitter.com/oliveajike",
+    "https://www.linkedin.com/in/gbemisola-oyeniyi",
+    "https://instagram.com/oliveajike"
+  ],
+  "jobTitle": "Software Developer & AI Tools Creator",
+  "nationality": "Nigerian",
+  "knowsLanguage": ["en"],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Open-Source Developer",
+    "skills": ["AI", "Web Design", "Web Development", "App Development", "JavaScript"]
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Ladoke Akintola University of Technology",
+    "url": "https://www.lautech.edu.ng/"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Self-Employed"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gbemisolaoyeniyi.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Outparse",
+  "url": "https://outparse.github.io",
+  "description": "A free, open-source tool that helps you write more clearly and confidently.",
+  "applicationCategory": "WritingAssistant",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Gbemisola Oyeniyi"
+  },
+  "keywords": "writing, AI, productivity, open-source"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Zysculpt",
+  "url": "https://github.com/zysculpt",
+  "description": "A free, open-source career assistant for job seekers.",
+  "applicationCategory": "CareerTool",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Gbemisola Oyeniyi"
+  },
+  "keywords": "resume, cover letter, jobs, AI"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://gbemisolaoyeniyi.com"
+},
+
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Projects",
+"item": "https://gbemisolaoyeniyi.com#projects"
+}
+]
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Lexend:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
@@ -208,28 +292,30 @@ left: 0;
 }
 .accessibility-btn {
 position: fixed;
-top: 20px;
-left: 10px;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
 z-index: 100;
-background: #ff7707;
-color: white;
-width: 44px;
-height: 44px;
-border-radius: var(--radius-sm);
+border: 2px solid #ff7707;
+background: var(--color-lighter);
+color: var(--color-primary);
+padding: 0.75rem 1.5rem;
+border-radius: 50px;
 display: flex;
 align-items: center;
 justify-content: center;
 cursor: pointer;
 box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 transition: all 0.3s ease;
-border: none;
+gap: 0.5rem;
+font-weight: 500;
 }
 .accessibility-btn:hover {
-transform: scale(1.1);
+transform: translateX(-50%) scale(1.05);
 }
 .accessibility-btn svg {
-width: 24px;
-height: 24px;
+width: 20px;
+height: 20px;
 }
 .modal-header {
 display: flex;
@@ -523,7 +609,7 @@ font-size: var(--text-sm);
 footer {
 width: 100%;
 background: var(--gradient);
-padding: 3rem 2rem;
+padding: 3rem 2rem 5rem;
 text-align: center;
 margin-top: auto;
 }
@@ -565,6 +651,7 @@ color: var(--color-primary);
 }
 .copyright {
 font-size: 0.9rem;
+margin-bottom: 40px;
 color: var(--color-secondary);
 }
 .copyright a {
@@ -647,6 +734,11 @@ align-items: flex-end;
 .modal-content {
 width: 100%;
 }
+.accessibility-btn {
+width: auto;
+padding: 0.75rem 1rem;
+font-size: 0.875rem;
+}
 }
 </style>
 </head>
@@ -656,6 +748,7 @@ width: 100%;
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
 <path d="M12 2a2 2 0 110 4 2 2 0 010-4zm8 5H4a1 1 0 000 2h7v3.5l-3.1 7.35a1 1 0 001.8.8L12 14.62l2.3 6.03a1 1 0 001.8-.8L13 12.5V9h7a1 1 0 000-2z"/>
 </svg>
+Accessibility
 </button>
 <header>
 <a href="/"><img src="/assets/images/logo-light.svg" alt="Gbemisola Oyeniyi Logo" class="logo" id="siteLogo"></a>
@@ -666,7 +759,7 @@ width: 100%;
 <h1>A Little About Me</h1>
 <p>I love solving hard problems the lazy-smart way: creatively, efficiently, and ideally from a comfy seat. My taste gravitates toward only the best in books, music, and TV. Lately, I've been diving deep into the possibilities of AI to drive open-source projects and build digital businesses.</p>
 <div class="hero-video">
-<video width="100%" height="auto" autoplay loop muted playsinline poster="/assets/images/scrapbook.jpg">
+<video width="100%" height="auto" autoplay loop muted playsinline poster="/assets/images/scrapbook.png">
 <source src="/assets/video/scrapbook.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -881,7 +974,7 @@ View
 </div>
 </div>
 <script>
-// Video autoplay/pause on scroll
+
 const video = document.querySelector('.hero-video video');
 let isVideoPlaying = false;
 const observer = new IntersectionObserver((entries) => {
@@ -900,13 +993,13 @@ isVideoPlaying = false;
 });
 }, { threshold: 0.5 });
 observer.observe(video);
-// Accessibility Modal Functionality
+
 const accessibilityBtn = document.querySelector('.accessibility-btn');
 const accessibilityModal = document.getElementById('accessibilityModal');
 const closeModal = document.querySelector('.close-modal');
 const readAloudToggle = document.getElementById('readAloudToggle');
 const siteLogo = document.getElementById('siteLogo');
-// Toggle modal
+
 accessibilityBtn.addEventListener('click', () => {
 accessibilityModal.style.display = 'flex';
 document.body.classList.add('modal-open');
@@ -915,29 +1008,29 @@ closeModal.addEventListener('click', () => {
 accessibilityModal.style.display = 'none';
 document.body.classList.remove('modal-open');
 });
-// Close modal when clicking outside
+
 window.addEventListener('click', (e) => {
 if (e.target === accessibilityModal) {
 accessibilityModal.style.display = 'none';
 document.body.classList.remove('modal-open');
 }
 });
-// Toggle option sections
+
 function toggleOption(id) {
 const optionButtons = document.getElementById(id);
 const optionHeader = optionButtons.previousElementSibling;
 optionButtons.classList.toggle('active');
 optionHeader.classList.toggle('active');
 }
-// Save settings to localStorage
+
 function saveSettings(key, value) {
 localStorage.setItem(key, value);
 }
-// Get settings from localStorage
+
 function getSetting(key) {
 return localStorage.getItem(key);
 }
-// Theme switcher
+
 function setTheme(theme) {
 if (theme === 'dark') {
 document.body.classList.add('dark-mode');
@@ -947,7 +1040,7 @@ document.body.classList.remove('dark-mode');
 siteLogo.src = '/assets/images/logo-light.svg';
 }
 saveSettings('theme', theme);
-// Update active button state
+
 const modeButtons = document.querySelectorAll('#mode-options .option-btn');
 modeButtons.forEach(btn => {
 btn.classList.remove('active');
@@ -957,7 +1050,7 @@ btn.classList.add('active');
 }
 });
 }
-// Font switcher
+
 function setFont(font) {
 let fontValue;
 switch(font) {
@@ -980,7 +1073,7 @@ break;
 document.documentElement.style.setProperty('--current-font', fontValue);
 document.body.style.fontFamily = fontValue;
 saveSettings('font', font);
-// Update active button state
+
 const fontButtons = document.querySelectorAll('#font-options .option-btn');
 fontButtons.forEach(btn => {
 btn.classList.remove('active');
@@ -989,11 +1082,11 @@ btn.classList.add('active');
 }
 });
 }
-// Text size switcher
+
 function setTextSize(size) {
 document.documentElement.style.setProperty('--current-text-size', size);
 saveSettings('textSize', size);
-// Update active button state
+
 const textSizeButtons = document.querySelectorAll('#text-size-options .option-btn');
 textSizeButtons.forEach(btn => {
 btn.classList.remove('active');
@@ -1008,11 +1101,11 @@ btn.classList.add('active');
 }
 });
 }
-// Line height switcher
+
 function setLineHeight(height) {
 document.documentElement.style.setProperty('--current-leading', height);
 saveSettings('lineHeight', height);
-// Update active button state
+
 const lineHeightButtons = document.querySelectorAll('#line-height-options .option-btn');
 lineHeightButtons.forEach(btn => {
 btn.classList.remove('active');
@@ -1029,11 +1122,11 @@ btn.classList.add('active');
 }
 });
 }
-// Letter spacing switcher
+
 function setLetterSpacing(spacing) {
 document.documentElement.style.setProperty('--current-letter-spacing', spacing);
 saveSettings('letterSpacing', spacing);
-// Update active button state
+
 const letterSpacingButtons = document.querySelectorAll('#letter-spacing-options .option-btn');
 letterSpacingButtons.forEach(btn => {
 btn.classList.remove('active');
@@ -1049,7 +1142,7 @@ btn.classList.add('active');
 }
 });
 }
-// Read aloud functionality
+
 let speechSynthesis = window.speechSynthesis;
 let utterance = null;
 readAloudToggle.addEventListener('change', (e) => {
@@ -1075,14 +1168,13 @@ if (speechSynthesis.speaking) {
 speechSynthesis.cancel();
 }
 }
-// Load saved settings on page load
+
 function loadSettings() {
-// Theme
 const savedTheme = getSetting('theme');
 if (savedTheme) {
 setTheme(savedTheme);
 } else {
-// Check for prefers-color-scheme if no saved theme
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 setTheme('dark');
 } else {
@@ -1110,21 +1202,21 @@ setLineHeight(savedLineHeight);
 } else {
 setLineHeight('var(--leading-relaxed)');
 }
-// Letter spacing
+
 const savedLetterSpacing = getSetting('letterSpacing');
 if (savedLetterSpacing) {
 setLetterSpacing(savedLetterSpacing);
 } else {
 setLetterSpacing('var(--letter-spacing-normal)');
 }
-// Read aloud
+
 const savedReadAloud = getSetting('readAloud');
 if (savedReadAloud === 'true') {
 readAloudToggle.checked = true;
 startReadAloud();
 }
 }
-// Initialize settings when page loads
+
 document.addEventListener('DOMContentLoaded', () => {
 loadSettings();
 });
